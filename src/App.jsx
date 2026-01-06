@@ -1,35 +1,93 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import NavBar from "./components/NavBar";
+import AboutUs from "./sections/AboutUs";
+import Hero from "./sections/Hero";
+import Agenda from "./sections/Agenda";
+import Keynote from "./sections/Keynote";
+import Workshop from "./sections/Workshop";
+import Sponsors from "./sections/Sponsors";
+import Team from "./sections/TheTeam";
+import Panelist from "./sections/Panelist";
+import FAQ from "./sections/FAQ";
+import TheTeam from "./sections/TheTeam";
+import Footer from "./sections/Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='App'>
+      <div className='App-Component'>
+        <div className='Nav-Component'>
+          <NavBar />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className='Hero-Background'>
+        <div className='App-Component'>
+          <Hero />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <div className='About-Us-Background'>
+        <div className='App-Component'>
+          <AboutUs />
+        </div>
+      </div>
+      <div
+        className='Agenda-Background'
+        id='Agenda'
+      >
+        <div className='App-Component'>
+          <Agenda />
+        </div>
+      </div>
+      <div
+        className='KeyNote-Background'
+        id='KeyNote'
+      >
+        <div className='KeyNote-Component'>
+          <Keynote />
+        </div>
+      </div>
+
+      <div
+        className='Workshop-Background'
+        id='Workshops'
+      >
+        <div className='Workshop-Component'>
+          <Workshop />
+        </div>
+      </div>
+
+      <div
+        className='Panelist-Background'
+        id='Panelist'
+      >
+        <div className='Panelist-Component'>
+          <Panelist />
+        </div>
+      </div>
+
+      <div className='Sponsor-FAQ-Team-Background'>
+        <div
+          className='App-Component'
+          id='Sponsors'
+        >
+          <Sponsors />
+        </div>
+        <div
+          className='App-Component'
+          id='FAQ'
+        >
+          <FAQ />
+        </div>
+        <div
+          className='App-Component'
+          id='TheTeam'
+        >
+          <TheTeam />
+        </div>
+      </div>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
