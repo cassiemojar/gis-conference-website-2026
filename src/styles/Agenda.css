@@ -1,0 +1,22 @@
+.event-name {
+  font-weight: 600;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 3fr;
+}
+
+.lhs {
+  position: relative;
+  background: #ffffff;
+}
+
+.point {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: yellow;
+}
