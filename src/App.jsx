@@ -11,6 +11,7 @@ import Panelist from "./sections/Panelist";
 import FAQ from "./sections/FAQ";
 import TheTeam from "./sections/TheTeam";
 import Footer from "./sections/Footer";
+import PrevConf from "./sections/PrevConf";
 
 function App() {
   return (
@@ -62,6 +63,12 @@ function App() {
       >
         <div className='Panelist-Component'>
           <Panelist />
+        </div>
+      </div>
+
+      <div className='Prev-Conf-Background'>
+        <div className='Prev-Conf-Component'>
+          <PrevConf />
         </div>
       </div>
 
