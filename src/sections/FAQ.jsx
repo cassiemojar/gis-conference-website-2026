@@ -44,8 +44,8 @@ const AccordionItem = ({ question, answer }) => {
                                 marginRight: '0',
                                 padding: '0',
                                 filter: `
-                                drop - shadow(0 6px 6px rgba(0, 0, 0, 0.4)) /* shadow below */ 
-                                drop- shadow(0 0 4px rgba(208, 205, 234, 0.6)) /* glowing effect */
+                                drop-shadow(0 6px 6px rgba(0, 0, 0, 0.4)) /* shadow below */ 
+                                drop-shadow(0 0 4px rgba(208, 205, 234, 0.6)) /* glowing effect */
                                 `
                             }}
                         />
