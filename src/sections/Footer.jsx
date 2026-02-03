@@ -78,7 +78,7 @@ export default function Footer() {
                         <Stack direction="row" spacing={2} alignItems="center">
                             <img src={whiteLogo} alt="GIS Logo" style={{ width: '80%', maxWidth: '100px', height: 'auto' }} />
                             <Box>
-                                <Typography variant="h6" fontWeight={700} fontFamily="'Josefin Sans', sans-serif">
+                                <Typography variant="h5" fontWeight={700} fontFamily="'Josefin Sans', sans-serif">
                                     girls in STEAM
                                 </Typography>
                                 <Typography variant="body2" fontFamily="'Josefin Sans', sans-serif" sx={{ mt: 1, opacity: 0.9, maxWidth: '400px' }}>
