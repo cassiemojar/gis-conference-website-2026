@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Container, Box, Typography, Link, Grid, Stack } from '@mui/material';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ig from './../images/logo-ig.png';
+import fb from './../images/logo-fb.png';
+import yt from './../images/logo-yt.png';
+import linkedin from './../images/logo-linkedin.png';
 import whiteLogo from './../images/white-gis-logo.png';
 
 export default function Footer() {
@@ -17,11 +17,11 @@ export default function Footer() {
                             Contact Us
                         </Typography>
                         <Typography variant="body2" sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center' }}>
-                            Email us at{' '}
-                            <Link href="mailto:ubc.conference@girlsinsteam.org" color="inherit" sx={{ ml: 0.5, textDecoration: 'underline' }}>
+                            💌 Email us at{' '}
+                            <Link href="mailto:ubc.conference@girlsinsteam.org" color="inherit" sx={{ ml: 0.5, textDecoration: 'underline', mr: 0.5 }}>
                                 ubc.conference@girlsinsteam.org
                             </Link>{' '}
-                            if you have any questions
+                            if you have any questions!
                         </Typography>
                     </Grid>
 
@@ -30,11 +30,39 @@ export default function Footer() {
                             SEE WHAT WE’RE UP TO!
                         </Typography>
                         <Stack direction="row" spacing={2}>
-                            <InstagramIcon sx={{ fontSize: 32, cursor: 'pointer' }} />
-                            <FacebookIcon sx={{ fontSize: 32, cursor: 'pointer' }} />
-                            <YouTubeIcon sx={{ fontSize: 32, cursor: 'pointer' }} />
-                            <LinkedInIcon sx={{ fontSize: 32, cursor: 'pointer' }} />
+                            {[
+                                { href: "https://www.instagram.com/girlsinsteamorg/", src: ig, alt: "Instagram logo" },
+                                { href: "https://www.facebook.com/girlsinsteamorg/", src: fb, alt: "Facebook logo" },
+                                { href: "https://www.youtube.com/@girlsinsteam", src: yt, alt: "YouTube logo" },
+                                { href: "https://www.linkedin.com/company/girlsinsteam/", src: linkedin, alt: "LinkedIn logo" },
+                            ].map((item, index) => (
+                                <Box
+                                    key={index}
+                                    component="a"
+                                    href={item.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    sx={{ display: "inline-flex" }}
+                                >
+                                    <Box
+                                        component="img"
+                                        src={item.src}
+                                        alt={item.alt}
+                                        sx={{
+                                            width: 32,
+                                            height: 32,
+                                            cursor: "pointer",
+                                            transition: "transform 0.3s ease, filter 0.3s ease",
+                                            "&:hover": {
+                                                transform: "scale(1.2)",
+                                                filter: "drop-shadow(0 4px 10px rgba(208, 205, 234, 0.6))",
+                                            },
+                                        }}
+                                    />
+                                </Box>
+                            ))}
                         </Stack>
+
                     </Grid>
                 </Grid>
 
@@ -45,8 +73,8 @@ export default function Footer() {
                         <Stack direction="row" spacing={2} alignItems="center">
                             <img src={whiteLogo} alt="GIS Logo" style={{ width: '80%', maxWidth: '100px', height: 'auto' }} />
                             <Box>
-                                <Typography variant="h5" sx={{ fontWeight: 500, lineHeight: 1.2 }}>
-                                    girls in <span style={{ fontWeight: 700 }}>STEAM</span>
+                                <Typography variant="h6" fontWeight={700}>
+                                    girls in STEAM
                                 </Typography>
                                 <Typography variant="body2" sx={{ mt: 1, opacity: 0.9, maxWidth: '400px' }}>
                                     Supporting access to STEAM education for girls, gender-diverse people, and the LGBTQ+ community.
@@ -65,29 +93,54 @@ export default function Footer() {
                         <Grid container spacing={4} justifyContent={{ xs: 'flex-start', md: 'flex-end' }}>
                             {/* Quick Links */}
                             <Grid item xs={6} md={4}>
-                                <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 1 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
                                     QUICK LINKS
                                 </Typography>
                                 <Stack spacing={1}>
-                                    {['Home', 'About Us', 'Our Values', 'Events', 'Resources', 'Newsletter'].map((text) => (
-                                        <Link key={text} href="#" color="inherit" underline="none" sx={{ fontSize: '0.9rem', '&:hover': { opacity: 0.7 } }}>
-                                            {text}
-                                        </Link>
-                                    ))}
+                                    <Link key='Home' href="#Hero" color="inherit" underline="none"
+                                        sx={{
+                                            fontSize: '0.9rem',
+                                            '&:hover': { filter: 'drop-shadow(0 6px 10px rgba(208, 205, 234, 0.6))' }
+                                        }}>
+                                        Home
+                                    </Link>
+                                    <Link key='About' href="#AboutUs" color="inherit" underline="none"
+                                        sx={{
+                                            fontSize: '0.9rem',
+                                            '&:hover': { filter: 'drop-shadow(0 6px 10px rgba(208, 205, 234, 0.6))' }
+                                        }}>
+                                        About InnovateHer
+                                    </Link>
+                                    <Link key='Agenda' href="#Agenda" color="inherit" underline="none"
+                                        sx={{
+                                            fontSize: '0.9rem',
+                                            '&:hover': { filter: 'drop-shadow(0 6px 10px rgba(208, 205, 234, 0.6))' }
+                                        }}>
+                                        Agenda
+                                    </Link>
                                 </Stack>
                             </Grid>
 
                             {/* Support */}
                             <Grid item xs={6} md={4}>
-                                <Typography variant="subtitle1" sx={{ fontWeight: 700, mb: 1 }}>
+                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
                                     SUPPORT
                                 </Typography>
                                 <Stack spacing={1} >
-                                    {['Donate', 'Become a Sponsor', 'FAQ', 'Join GIS'].map((text) => (
-                                        <Link key={text} href="#" color="inherit" underline="none" sx={{ fontSize: '0.9rem', '&:hover': { opacity: 0.7 } }}>
-                                            {text}
-                                        </Link>
-                                    ))}
+                                    <Link key='FAQ' href="#FAQ" color="inherit" underline="none"
+                                        sx={{
+                                            fontSize: '0.9rem',
+                                            '&:hover': { filter: 'drop-shadow(0 6px 10px rgba(208, 205, 234, 0.6))' }
+                                        }}>
+                                        FAQ
+                                    </Link>
+                                    <Link key='Become a Sponsor' href="mailto:UBC.sponsorship@girlsinsteam.org" color="inherit" underline="none"
+                                        sx={{
+                                            fontSize: '0.9rem',
+                                            '&:hover': { filter: 'drop-shadow(0 6px 10px rgba(208, 205, 234, 0.6))' }
+                                        }}>
+                                        Become a Sponsor
+                                    </Link>
                                 </Stack>
                             </Grid>
                         </Grid>
