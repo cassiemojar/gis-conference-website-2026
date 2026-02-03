@@ -87,6 +87,7 @@ const AccordionItem = ({ question, answer }) => {
                 >
                     <Typography
                         variant="h6"
+                        fontFamily="'Josefin Sans', sans-serif"
                         sx={{
                             textAlign: "left",
                             color: "#D0CDEA",
@@ -111,6 +112,7 @@ export default function FAQ() {
             <div className="faq-section">
                 <Typography
                     variant="h4"
+                    fontFamily="'Josefin Sans', sans-serif"
                     sx={{
                         fontWeight: 'bold',
                         marginTop: '25px',
