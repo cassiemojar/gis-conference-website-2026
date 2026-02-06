@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .navbar-buttons {
+        display: none !important;
+        /* Force hiding for small screens */
+    }
+
+    #menu-button {
+        display: block !important;
+        /* Show menu button for small screens */
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-buttons {
+        display: flex !important;
+        /* Show navbar buttons for larger screens */
+    }
+
+    #menu-button {
+        display: none !important;
+        /* Hide menu button for larger screens */
+    }
+}
+
+.font {
+    font-family: 'Josefin Sans';
+    color: #EDE9EA;
+}
