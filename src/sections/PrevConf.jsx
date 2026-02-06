@@ -36,12 +36,30 @@ function PrevConf() {
 
     return (
         <Box id="PrevConf" className="prev-conf-container">
-            <Typography variant="h1" className="section-title">PREVIOUS CONFERENCE</Typography>
+            <Typography
+                variant="h1"
+                sx={{
+                    textAlign: "center",
+                    color: "#8683C6",
+                    fontFamily: "Josefin Sans",
+                    fontWeight: "bold",
+                    marginBottom: "40px",
+                    fontSize: {       // Responsive font size
+                        xs: "2.4rem",
+                        sm: "3.2rem",
+                        md: "4.5rem",
+                        lg: "5.5rem",
+                    },
+                    animation: "slideIn 1s ease-out", // Apply slide-in animation
+                }}
+            >
+                PREVIOUS CONFERENCE
+            </Typography>
 
             <Grid container spacing={4} alignItems="center" justifyContent="center" sx={{ px: { xs: 2, md: 10 } }}>
-                {/* Stats Column */}
+                {/* Stats Column - currently placeholder stats */}
                 <Grid item xs={12} md={4}>
-                    <Box className="stats-column">
+                    <Box className="stats-column" sx={{textAlign: 'center'}}>
                         <Box sx={{ mb: 4 }}><Typography className="stat-number">1000+</Typography><Typography className="stat-label">ATTENDEES</Typography></Box>
                         <Box sx={{ mb: 4 }}><Typography className="stat-number">50+</Typography><Typography className="stat-label">SPEAKERS</Typography></Box>
                         <Box sx={{ mb: 4 }}><Typography className="stat-number">20+</Typography><Typography className="stat-label">WORKSHOPS</Typography></Box>
@@ -50,7 +68,7 @@ function PrevConf() {
 
                 {/* Photo Recap Box */}
                 <Grid item xs={12} md={8}>
-                    <Box 
+                    <Box
                         className="glass-card"
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
@@ -58,9 +76,9 @@ function PrevConf() {
                         style={{ backgroundImage: `url(${images[currentIndex]})`, backgroundSize: 'cover', backgroundPosition: 'center', cursor: 'zoom-in' }}
                     >
                         <Box className="carousel-overlay">
-                             <Typography className="recap-overlay-text">Photo Recap</Typography>
+                            <Typography className="recap-overlay-text">Photo Recap</Typography>
                         </Box>
-                        
+
                         <Box className="carousel-controls" onClick={(e) => e.stopPropagation()}>
                             <ArrowBackIosNewIcon className="nav-arrow" onClick={handlePrev} />
                             <ArrowForwardIosIcon className="nav-arrow" onClick={handleNext} />
@@ -71,11 +89,27 @@ function PrevConf() {
 
             {/* View Previous Button */}
             <Box sx={{ textAlign: 'center', mt: 5 }}>
-                <Button 
-                    variant="contained" 
+                <Button
+                    variant="contained"
                     className="view-prev-button"
                     href="https://innovateher.vercel.app/"
                     target="_blank"
+                    sx={{
+                        backgroundColor: "#6363AB",
+                        padding: "12px 35px",
+                        borderRadius: "15px",
+                        fontFamily: "Josefin Sans",
+                        fontWeight: 700,
+                        fontSize: "clamp(1.5rem, 4vw, 2rem)",
+                        color: "#fff",
+
+                        boxShadow: "0 6px 8px rgba(220,220,220,0.6)",
+                        transition: "box-shadow 0.25s ease, transform 0.25s ease",
+
+                        "&:hover": {
+                            boxShadow: "0 0 18px rgba(255,255,255,0.8)"
+                        },
+                    }}
                 >
                     VIEW PREVIOUS
                 </Button>
