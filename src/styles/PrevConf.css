@@ -1,57 +1,110 @@
-.section-title {
-    font-weight: 800 !important;
-    color: #8683C6;
+.main-title {
     text-align: center;
-    margin-bottom: 50px !important;
+    color: #8683C6;
+    font-family: "Josefin Sans", sans-serif !important;
+    font-weight: 800 !important;
+    margin-bottom: 30px !important;
+    font-size: clamp(2.5rem, 6vw, 5.5rem) !important;
 }
 
 .glass-card {
-    height: 450px;
+    height: 460px;
+    width: 750px;
     border-radius: 30px;
     position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(99, 99, 171, 0.51);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 4px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(220,220,220,0.6);
+    transition: transform 0.3s ease;
 }
 
-.glass-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 40px rgba(134, 131, 198, 0.3);
+.carousel-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.carousel-blend {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(134, 131, 198, 0.8); 
+    mix-blend-mode: multiply;
+    transition: opacity 0.4s ease;
+}
+
+/* Hide overlay and text on hover (Pause) */
+.glass-card.is-paused .carousel-blend,
+.glass-card.is-paused .carousel-overlay {
+    opacity: 0;
 }
 
 .carousel-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(134, 131, 198, 0.2);
-    /* Tint */
-    backdrop-filter: blur(2px);
-    /* Slight blur until hover? Or keep it crisp */
+    z-index: 2;
     display: flex;
-    align-items: center;
     justify-content: center;
+    transition: opacity 0.3s ease;
+    align-items: flex-start; 
+    padding-top: 40px;
 }
 
 .recap-overlay-text {
-    color: white;
+    color: #6363AB !important;
     font-size: 2rem !important;
-    font-weight: bold !important;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: "Josefin Sans", sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+}
+
+.carousel-controls {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transform: scale(1.02);
 }
 
 .nav-arrow {
-    color: white;
-    font-size: 3rem !important;
+    color: #6363AB;
+    font-size: 4rem !important;
     cursor: pointer;
-    transition: opacity 0.2s;
+    filter: drop-shadow(0 6px 8px rgba(220,220,220,0.6));
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 0.3s ease, 
+                opacity 0.2s ease;
 }
 
 .nav-arrow:hover {
-    opacity: 0.7;
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.5));
+    opacity: 0.9;
+}
+
+.nav-arrow:active {
+    transform: scale(0.95);
+}
+
+/* Stats styling */
+.stat-number {
+    color: #8683C6 !important;
+    font-family: "Josefin Sans", sans-serif !important;
+    font-weight: 700 !important;
+    font-size: clamp(3rem, 5vw, 4rem) !important;
+    line-height: 1 !important;
+}
+
+.stat-label {
+    color: #8683C6 !important;
+    font-family: "Josefin Sans", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: clamp(1.5rem, 3vw, 2.5rem) !important;
+    letter-spacing: 3px;
 }
 
 /* Modal styling */
@@ -66,21 +119,77 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
 }
 
-.stat-label {
-    color: #8683C6 !important;
-    font-family: "Josefin Sans", sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 48px !important;
+.full-image-style {
+    max-width: 90%;
+    max-height: 85%;
+    border: 3px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
-.stat-number {
-    color: #8683C6 !important;
+.view-prev-button {
+    background-color: #6363AB !important;
+    padding: 12px 45px !important;
+    border-radius: 15px !important;
     font-family: "Josefin Sans", sans-serif !important;
-  font-weight: 700 !important;
-  font-size: 48px !important;
-  margin-bottom: -20px !important;
+    font-weight: 700 !important;
+    font-size: clamp(1.2rem, 3vw, 1.8rem) !important;
+    color: #fff !important;
 
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 6px 8px rgba(220,220,220,0.6);
+} 
+
+.mouse-pointer {
+    position: absolute;
+    left: 150px;
+    font-size: 40px;
+    color: #6363AB;
+    transform: rotate(75deg);
+    filter: drop-shadow(0 0 20px white);
+  }
+
+  @media (max-width: 1024px) {
+    .glass-card {
+        height: 350px; /* Shrink height for tablets */
+    }
+    
+    .recap-overlay-text {
+        font-size: 1.8rem !important;
+        padding-top: 20px;
+    }
+
+    .nav-arrow {
+        font-size: 3rem !important; /* Smaller arrows */
+    }
+    
+    /* Move mouse pointer so it doesn't overlap text on small screens */
+    .mouse-pointer {
+        left: 20px; 
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .glass-card {
+        height: 280px; /* Shrink height for phones */
+        border-radius: 20px;
+    }
+
+    .recap-overlay-text {
+        font-size: 1.4rem !important;
+        padding-top: 15px;
+    }
+
+    .nav-arrow {
+        font-size: 2.5rem !important;
+    }
+
+    /* Hide mouse pointer on mobile since there is no "hover" state */
+    .mouse-pointer {
+        display: none;
+    }
 }
