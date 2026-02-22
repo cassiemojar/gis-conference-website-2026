@@ -1,14 +1,14 @@
 .hero {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   position: relative;
-  background: black;
+  /* background: black; */
   z-index: 0;
   display: flex; 
   flex-direction: column; 
-  justify-content: center; 
+  justify-content: flex-start; 
   align-items: center; 
-
+  padding-top: 10%; 
   --line-gap: 28px;
 }
 
@@ -102,6 +102,17 @@
 .decoration-rhs .vl-center {
   right: calc(4 * var(--line-gap));
 }
+
+.innovate-her {
+    text-shadow: 0px 0px 8px, 4px 4px 8px rgba(0, 0, 0, 0.4);
+    font-size: 5rem; 
+}
+
+.innovate-her span {
+    color: #E6B8CF; 
+}
+
+
 
 
 
