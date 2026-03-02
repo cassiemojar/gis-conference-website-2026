@@ -8,12 +8,15 @@
 }
 
 .glass-card {
+    width: 700px;
+    max-width: 100%;
     height: 460px;
-    width: 750px;
     border-radius: 30px;
     position: relative;
-    box-shadow: 0px 0px 10px rgba(220,220,220,0.6);
+    box-shadow: 0px 0px 10px rgba(220, 220, 220, 0.6);
     transition: transform 0.3s ease;
+    margin: 0 auto;
+
 }
 
 .carousel-image {
@@ -22,18 +25,18 @@
     background-size: cover;
     background-position: center;
     transition: transform 0.5s ease;
+    border-radius: inherit;
 }
 
 .carousel-blend {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: rgba(134, 131, 198, 0.8); 
+    background: rgba(134, 131, 198, 0.8);
     mix-blend-mode: multiply;
     transition: opacity 0.4s ease;
 }
 
-/* Hide overlay and text on hover (Pause) */
 .glass-card.is-paused .carousel-blend,
 .glass-card.is-paused .carousel-overlay {
     opacity: 0;
@@ -46,16 +49,8 @@
     display: flex;
     justify-content: center;
     transition: opacity 0.3s ease;
-    align-items: flex-start; 
+    align-items: flex-start;
     padding-top: 40px;
-}
-
-.recap-overlay-text {
-    color: #6363AB !important;
-    font-size: 2rem !important;
-    font-family: "Josefin Sans", sans-serif !important;
-    font-weight: 700 !important;
-    letter-spacing: 2px;
 }
 
 .carousel-controls {
@@ -65,7 +60,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 15px;
     transform: scale(1.02);
 }
 
@@ -73,11 +68,17 @@
     color: #6363AB;
     font-size: 4rem !important;
     cursor: pointer;
-    filter: drop-shadow(0 6px 8px rgba(220,220,220,0.6));
+    filter: drop-shadow(0 6px 8px rgba(220, 220, 220, 0.6));
     transform: scale(1);
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                filter 0.3s ease, 
-                opacity 0.2s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        filter 0.3s ease,
+        opacity 0.2s ease;
+    /* Better touch target for mobile */
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-arrow:hover {
@@ -127,56 +128,76 @@
     max-height: 85%;
     border: 3px solid white;
     border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
-
-.view-prev-button {
-    background-color: #6363AB !important;
-    padding: 12px 45px !important;
-    border-radius: 15px !important;
-    font-family: "Josefin Sans", sans-serif !important;
-    font-weight: 700 !important;
-    font-size: clamp(1.2rem, 3vw, 1.8rem) !important;
-    color: #fff !important;
-
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-    box-shadow: 0 6px 8px rgba(220,220,220,0.6);
-} 
 
 .mouse-pointer {
     position: absolute;
-    left: 150px;
+    left: 0px;
     font-size: 40px;
     color: #6363AB;
     transform: rotate(75deg);
     filter: drop-shadow(0 0 20px white);
-  }
+}
 
-  @media (max-width: 1024px) {
+/* Tablet styles */
+@media (max-width: 1024px) {
     .glass-card {
-        height: 350px; /* Shrink height for tablets */
+        height: 350px;
+        max-width: 90%;
     }
-    
+
+    .carousel-controls {
+        padding: 0 10px;
+    }
+
     .recap-overlay-text {
         font-size: 1.8rem !important;
         padding-top: 20px;
     }
 
     .nav-arrow {
-        font-size: 3rem !important; /* Smaller arrows */
+        font-size: 3rem !important;
     }
-    
-    /* Move mouse pointer so it doesn't overlap text on small screens */
+
     .mouse-pointer {
-        left: 20px; 
-        font-size: 30px;
+        display: none;
     }
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+    .glass-card {
+        height: 300px;
+        max-width: 90%;
+        border-radius: 25px;
+    }
+
+    .carousel-controls {
+        padding: 0 8px;
+    }
+
+    .nav-arrow {
+        font-size: 2.8rem !important;
+        min-width: 50px;
+        min-height: 50px;
+    }
+
+    .mouse-pointer {
+        display: none;
+    }
+}
+
+/* Small mobile styles */
 @media (max-width: 600px) {
     .glass-card {
-        height: 280px; /* Shrink height for phones */
+        height: 280px;
+        max-width: 90%;
         border-radius: 20px;
+    }
+
+    .carousel-controls {
+        padding: 0 5px;
     }
 
     .recap-overlay-text {
@@ -186,9 +207,45 @@
 
     .nav-arrow {
         font-size: 2.5rem !important;
+        min-width: 48px;
+        min-height: 48px;
     }
 
-    /* Hide mouse pointer on mobile since there is no "hover" state */
+    .mouse-pointer {
+        display: none;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .glass-card {
+        height: 250px;
+        border-radius: 15px;
+    }
+
+    .carousel-controls {
+        padding: 0 3px;
+    }
+
+    .nav-arrow {
+        font-size: 2.2rem !important;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .main-title {
+        margin-bottom: 20px !important;
+    }
+
+    .stat-number {
+        font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+    }
+
+    .stat-label {
+        font-size: clamp(1.2rem, 4vw, 2rem) !important;
+        letter-spacing: 2px;
+    }
+
     .mouse-pointer {
         display: none;
     }

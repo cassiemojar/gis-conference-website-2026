@@ -19,16 +19,8 @@ import img9 from './../images/prev-conf/discussion-3.JPG';
 import img10 from './../images/prev-conf/speach.JPG';
 
 const images = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10
+    img1, img2, img3, img4, img5,
+    img6, img7, img8, img9, img10
 ];
 
 function PrevConf() {
@@ -46,7 +38,7 @@ function PrevConf() {
     }, [currentIndex, isPaused, open]);
 
     const handleNext = (e) => {
-        if (e) e.stopPropagation(); // Prevents modal from opening when clicking arrows
+        if (e) e.stopPropagation();
         setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
     };
 
@@ -56,39 +48,63 @@ function PrevConf() {
     };
 
     return (
-        <Box id="PrevConf" className="prev-conf-container" sx={{ py: 10 }}>
+        <Box
+            id="PrevConf"
+            className="prev-conf-container"
+            sx={{
+                py: { xs: 6, md: 8 },
+                px: { xs: 1, sm: 2, md: 0 }
+            }}
+        >
             <Typography variant="h1" className="main-title">
                 PREVIOUS CONFERENCE
             </Typography>
 
-            <Grid container spacing={15} alignItems="center" justifyContent="center" sx={{ px: { xs: 4, md: 12 } }}>
-                {/* Stats Column*/}
-                <Grid item xs={12} md={5}>
-                    <Box sx={{ textAlign: 'center' }}>
-                        <Box sx={{ mb: 6 }}>
-                            <Typography className="stat-number">1000+</Typography>
+            <Grid
+                container
+                spacing={{ md: 8, lg: 15 }}
+                alignItems="center"
+                justifyContent="center"
+                sx={{
+                    px: { xs: 1, sm: 2, md: 10 },
+                    maxWidth: '100%',
+                    margin: '0 auto'
+                }}
+            >
+                {/* Stats Column */}
+                <Grid item xs={12} md={4}>
+                    <Box sx={{
+                        textAlign: 'center',
+                        position: 'relative'
+                    }}>
+                        <Box sx={{ mb: { xs: 4, md: 6 } }}>
+                            <Typography className="stat-number">100+</Typography>
                             <Typography className="stat-label">ATTENDEES</Typography>
                         </Box>
-                        <Box sx={{ mb: 6 }}>
-                            <Typography className="stat-number">50+</Typography>
+                        <Box sx={{ mb: { xs: 4, md: 6 } }}>
+                            <Typography className="stat-number">25+</Typography>
                             <Typography className="stat-label">SPEAKERS</Typography>
                         </Box>
                         <FaMousePointer className="mouse-pointer" style={{ zIndex: 1 }} />
-                        <Box sx={{ mb: 6 }}>
-                            <Typography className="stat-number">20+</Typography>
+                        <Box sx={{ mb: { xs: 4, md: 6 } }}>
+                            <Typography className="stat-number">10+</Typography>
                             <Typography className="stat-label">WORKSHOPS</Typography>
                         </Box>
                     </Box>
                 </Grid>
 
-                {/* Photo Recap Box & View Prev Button - Right Column */}
-                <Grid item xs={12} md={7}>
+                {/* Photo Gallery Column */}
+                <Grid item xs={12} md={8}>
                     <Box
                         className={`glass-card ${isPaused ? 'is-paused' : ''}`}
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
                         onClick={() => setOpen(true)}
-                        sx={{ position: 'relative', overflow: 'hidden', cursor: 'pointer' }}
+                        sx={{
+                            position: 'relative',
+                            overflow: 'hidden',
+                            cursor: 'pointer',
+                        }}
                     >
                         <Box
                             className="carousel-image"
@@ -97,16 +113,29 @@ function PrevConf() {
 
                         <Box className="carousel-blend" />
 
-                        <Box className="carousel-overlay">
-                            <Typography className="recap-overlay-text">Photo Recap</Typography>
-                        </Box>
-
                         <Box className="carousel-controls">
-                            <ArrowBackIosNewIcon className="nav-arrow" onClick={handlePrev} />
-                            <ArrowForwardIosIcon className="nav-arrow" onClick={handleNext} />
+                            <ArrowBackIosNewIcon
+                                className="nav-arrow"
+                                onClick={handlePrev}
+                                sx={{
+                                    touchAction: 'manipulation'  // Better touch performance
+                                }}
+                            />
+                            <ArrowForwardIosIcon
+                                className="nav-arrow"
+                                onClick={handleNext}
+                                sx={{
+                                    touchAction: 'manipulation'  // Better touch performance
+                                }}
+                            />
                         </Box>
                     </Box>
-                    <Box sx={{ textAlign: 'center', mt: 3 }}>
+
+                    <Box sx={{
+                        textAlign: 'center',
+                        mt: { xs: 4, md: 3 },
+                        px: { xs: 1, sm: 0 }
+                    }}>
                         <Button
                             variant="contained"
                             className="view-prev-button"
@@ -114,23 +143,23 @@ function PrevConf() {
                             target="_blank"
                             sx={{
                                 backgroundColor: "#6363AB",
-                                padding: "12px 35px",
+                                padding: { xs: "10px 25px", sm: "12px 35px" },
                                 borderRadius: "15px",
                                 fontFamily: "Josefin Sans",
                                 fontWeight: 700,
-                                fontSize: "clamp(1.5rem, 4vw, 2rem)",
+                                fontSize: { xs: "1.3rem", sm: "clamp(1.5rem, 4vw, 2rem)" },
                                 color: "#fff",
-
                                 boxShadow: "0 6px 8px rgba(220,220,220,0.6)",
-                                transition: "box-shadow 0.25s ease, transform 0.25s ease",
-                                transform: "translateY(0)",
+                                transition: "box-shadow 0.2s ease, transform 0.2s ease",
+                                minHeight: "44px", // Touch-friendly size
+                                touchAction: 'manipulation',
 
                                 "&:hover": {
                                     boxShadow: "0 0 18px rgba(255,255,255,0.8)",
                                     backgroundColor: 'hsl(240, 30%, 40%)',
                                 },
                                 "&:active": {
-                                    transform: "translateY(-2px)", // Sinks slightly when clicked
+                                    transform: "translateY(-2px)",
                                 }
                             }}
                         >
@@ -139,8 +168,6 @@ function PrevConf() {
                     </Box>
                 </Grid>
             </Grid>
-
-
 
             {/* Full Screen Modal */}
             <Modal
@@ -152,7 +179,11 @@ function PrevConf() {
             >
                 <Fade in={open}>
                     <Box className="modal-content" onClick={() => setOpen(false)}>
-                        <img src={images[currentIndex]} alt="Full view" className="full-image-style" />
+                        <img
+                            src={images[currentIndex]}
+                            alt="Full view"
+                            className="full-image-style"
+                        />
                     </Box>
                 </Fade>
             </Modal>
@@ -161,3 +192,4 @@ function PrevConf() {
 }
 
 export default PrevConf;
+
