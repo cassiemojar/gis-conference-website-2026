@@ -5,7 +5,6 @@ import './../styles/SupportUs.css';
 // sponsors
 import apsc from '../images/sponsors/logo-apsc-g.jpeg';
 import seaspan from '../images/sponsors/logo-seaspan-g.png';
-import kontur from '../images/sponsors/logo-kontur-g.png';
 import hedgehog from '../images/sponsors/logo-hedgehog-s.png';
 import mcelhanney from '../images/sponsors/logo-mcelhanney-s.png';
 import bcsun from '../images/sponsors/logo-bcsun-b.jpeg';
@@ -33,7 +32,7 @@ import wipa from '../images/sponsors/booth-wipa.jpeg';
 export default function Sponsors() {
     // Array of sponsor logos
     const sponsorLogos = [
-        apsc, seaspan, kontur,
+        apsc, seaspan, 
         hedgehog, mcelhanney,
         bcsun, etro,
         belisse, indomie, jbakes, mavian, raven, darna, crave
@@ -83,7 +82,7 @@ export default function Sponsors() {
                             </div>
                             {/* Bottom Row: Next 4 Logos */}
                             <div className="LogoRow">
-                                {sponsorLogos.slice(4, 7).map((logo, index) => renderLogo(logo, index + 4))}
+                                {sponsorLogos.slice(4, 6).map((logo, index) => renderLogo(logo, index + 4))}
                             </div>
                         </div>
                         <Typography
@@ -93,11 +92,11 @@ export default function Sponsors() {
                         </Typography>
                         <div className="BoxContainer">
                             <div className="LogoRow">
-                                {sponsorLogos.slice(7, 11).map((logo, index) => renderLogo(logo, index))}
+                                {sponsorLogos.slice(6, 10).map((logo, index) => renderLogo(logo, index))}
                             </div>
                             {/* Bottom Row: Next 4 Logos */}
                             <div className="LogoRow">
-                                {sponsorLogos.slice(11, 14).map((logo, index) => renderLogo(logo, index + 4))}
+                                {sponsorLogos.slice(10, 14).map((logo, index) => renderLogo(logo, index + 4))}
                             </div>
                         </div>
                         <Typography
