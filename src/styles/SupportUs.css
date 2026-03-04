@@ -16,7 +16,6 @@
     margin-bottom: 30px !important;
     margin-top: 40px !important;
     font-size: clamp(1.5rem, 4vw, 3.5rem) !important;
-    text-shadow: 4px 3px 11px rgba(225, 225, 225, 0.6);
 }
 
 .SupportUsContainer {
