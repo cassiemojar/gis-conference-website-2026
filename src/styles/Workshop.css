@@ -1,14 +1,62 @@
-
 .workshop-section {
-    padding: 24px;
-    max-width: 900px;
+    padding: 24px 16px;
+    max-width: 1304px;
     margin: 0 auto;
+    background: linear-gradient(180deg, #8a86c4 10%, rgba(99, 99, 171, 0.84) 100%);
+    font-family: "Josefin Sans", sans-serif;
   }
-  
+
+  .workshop-title {
+    margin: 0 0 16px;
+    font-size: clamp(48px, 10vw, 90px);
+    font-weight: 700;
+    color: #50508d;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .workshop-intro {
+    padding: 10px 0;
+    max-width: 965px;
+    margin: 0 auto 24px;
+  }
+
+  .workshop-intro ul {
+    margin: 0;
+    padding-left: 37.5px;
+    font-size: clamp(18px, 2.5vw, 25px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
+  }
+
+  .workshop-intro li {
+    margin-bottom: 0.5em;
+  }
+
+  .workshop-intro li:last-child {
+    margin-bottom: 0;
+  }
+
+  .workshop-content-box {
+    position: relative;
+    padding: 24px 16px;
+    border-radius: 15px;
+    background: linear-gradient(
+      180deg,
+      rgba(227, 166, 196, 0.22) 0%,
+      rgba(125, 106, 173, 0.55) 67.264%,
+      rgba(79, 79, 163, 0.7) 100%
+    );
+    opacity: 0.9;
+    min-height: 454px;
+  }
+
   .workshop-section-inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
     justify-content: center;
     margin-bottom: 24px;
   }
@@ -19,11 +67,13 @@
     justify-content: space-between;
     gap: 8px;
     width: 100%;
-    min-height: 68px;
-    padding: 12px 24px;
+    max-width: 1126px;
+    min-height: 56px;
+    margin: 0 auto;
+    padding: 8px 24px;
     border-radius: 15px;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.44);
+    background: rgba(169, 169, 228, 0.2);
     opacity: 0.9;
   }
 
@@ -54,40 +104,66 @@
 
   .workshop-nav-item--active {
     background: #e8def8;
-    color: #1d192b;
+    color: #4a4459;
     font-weight: 700;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.37);
   }
-  
+
   .workshop-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    max-width: 360px;
-    background-color: rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 367px;
+    width: 100%;
   }
-  
+
   .workshop-card-time {
-    margin: 0 0 4px;
-    font-size: 14px;
-    color: #262222;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1;
   }
-  
+
   .workshop-card-topic {
-    margin: 0 0 12px;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
     font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+  }
+  
+  .workshop-card-topic .workshop-led {
+    font-weight: 300;
   }
   
   .workshop-card-body {
+    min-height: 348px;
+    padding: 10px 3px;
+    border-radius: 10px;
+    background: rgba(65, 65, 88, 0.2);
     display: flex;
-    gap: 12px;
     align-items: center;
+    justify-content: center;
+  }
+  
+  .workshop-card-body-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 30px;
+    align-items: center;
+    justify-content: center;
+    max-width: 360px;
+    width: 100%;
+    padding-left: 12px;
+    border-left: 1px solid #a6a8ce;
   }
   
   .workshop-card-dummy-photo {
-    width: 64px;
-    height: 64px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     flex-shrink: 0;
     overflow: hidden;
@@ -104,22 +180,33 @@
   }
   
   .workshop-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+    max-width: 347px;
   }
   
   .workshop-card-name {
-    margin: 0 0 4px;
-    font-size: 18px;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
     font-weight: 700;
+    line-height: 1.2;
     color: #fff;
   }
-  
+
   .workshop-card-role,
   .workshop-card-focus {
-    margin: 0 0 4px;
-    font-size: 14px;
-    color: #fff;
+    margin: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #aba5d9;
   }
-  
+
   .workshop-card-focus {
     margin-bottom: 0;
   }
