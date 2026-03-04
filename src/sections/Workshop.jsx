@@ -1,5 +1,6 @@
+import { useState } from "react";
 import "../styles/Workshop.css";
-import { workshopData } from "../data/WorkshopData.jsx";
+import { WORKSHOP_CATEGORIES, workshopData } from "../data/WorkshopData.jsx";
 
 function WorkshopCard({ workshop }) {
   const { time, topic, speakerName, pronouns, role, focusAreas, imageUrl } =
@@ -29,11 +30,28 @@ function WorkshopCard({ workshop }) {
 }
 
 export default function Workshop() {
+  const [activeCategory, setActiveCategory] = useState("science");
+  const filtered = workshopData.filter((w) => w.category === activeCategory);
+
   return (
     <div id="Workshops" className="workshop-section">
       <div className="workshop-section-inner">
-        <WorkshopCard workshop={workshopData[0]} />
+        {filtered.map((workshop) => (
+          <WorkshopCard key={workshop.id} workshop={workshop} />
+        ))}
       </div>
+      <nav className="workshop-nav-bar" aria-label="Workshop categories">
+        {WORKSHOP_CATEGORIES.map((cat) => (
+          <button
+            key={cat.id}
+            type="button"
+            className={activeCategory === cat.id ? "workshop-nav-item workshop-nav-item--active" : "workshop-nav-item"}
+            onClick={() => setActiveCategory(cat.id)}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }
