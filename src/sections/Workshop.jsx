@@ -20,7 +20,7 @@ function WorkshopCard({ workshop }) {
           </div>
           <div className="workshop-card-info">
           <p className="workshop-card-name">
-            {speakerName} ({pronouns})
+            {speakerName}{pronouns ? ` (${pronouns})` : ""}
           </p>
           <p className="workshop-card-role">{role}</p>
           <p className="workshop-card-focus">{focusAreas}</p>

@@ -8,12 +8,19 @@
 
   .workshop-title {
     margin: 0 0 16px;
-    font-size: clamp(48px, 10vw, 90px);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 90px;
     font-weight: 700;
     color: #50508d;
     text-align: center;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: normal;
+  }
+
+  @media (max-width: 768px) {
+    .workshop-title {
+      font-size: clamp(48px, 12vw, 90px);
+    }
   }
 
   .workshop-intro {
@@ -41,6 +48,9 @@
 
   .workshop-content-box {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 720px;
     padding: 24px 16px;
     border-radius: 15px;
     background: linear-gradient(
@@ -50,27 +60,32 @@
       rgba(79, 79, 163, 0.7) 100%
     );
     opacity: 0.9;
-    min-height: 454px;
+    box-sizing: border-box;
   }
 
   .workshop-section-inner {
+    flex: 1;
+    min-height: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-content: flex-start;
     margin-bottom: 24px;
+    overflow-y: auto;
   }
 
   .workshop-nav-bar {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 4px;
     width: 100%;
     max-width: 1126px;
     min-height: 56px;
     margin: 0 auto;
-    padding: 8px 24px;
+    padding: 8px 80px;
     border-radius: 15px;
     flex-wrap: wrap;
     background: rgba(169, 169, 228, 0.2);
@@ -80,10 +95,10 @@
   .workshop-nav-item {
     flex: 1 0 0;
     min-width: 0;
+    min-height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 40px;
     padding: 8px 16px;
     border: none;
     border-radius: 20px;
@@ -93,9 +108,10 @@
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.5px;
+    line-height: 16px;
     cursor: pointer;
-    transition: background 0.25s ease, color 0.25s ease, font-size 0.25s ease,
-      min-height 0.25s ease, padding 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 0 0 transparent;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   }
 
   .workshop-nav-item:hover {
@@ -106,11 +122,15 @@
   .workshop-nav-item--active {
     background: #e8def8;
     color: #4a4459;
-    font-weight: 700;
     font-size: 16px;
-    min-height: 48px;
-    padding: 12px 20px;
+    font-weight: 500;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.37);
+  }
+
+  @media (max-width: 900px) {
+    .workshop-nav-bar {
+      padding: 8px 24px;
+    }
   }
 
   .workshop-card {
@@ -187,8 +207,8 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     max-width: 347px;
   }
   
@@ -201,16 +221,21 @@
     color: #fff;
   }
 
-  .workshop-card-role,
+  .workshop-card-role {
+    margin: 0 0 8px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #e8e6f5;
+    letter-spacing: 0.02em;
+  }
+
   .workshop-card-focus {
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    color: #aba5d9;
-  }
-
-  .workshop-card-focus {
-    margin-bottom: 0;
+    color: #d8d5f0;
   }
