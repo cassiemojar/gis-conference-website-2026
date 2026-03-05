@@ -3,6 +3,7 @@ import CountDown from "../components/CountDown";
 import { PiCalendarDotsFill } from "react-icons/pi";
 import { TiLocation } from "react-icons/ti";
 import { FaGear } from "react-icons/fa6";
+import { Typography } from "@mui/material";
 
 function Hero() {
   return (
@@ -23,12 +24,14 @@ function Hero() {
           }
         `}
       </style>
+
+      {/* left hand side decorations */}
       <div className='decoration-lhs decoration'>
         <FaGear
-          className='gear'
+          className='gear gear-lhs'
           style={{
             zIndex: 1,
-            animation: "spin 4s linear infinite", // Apply spinning animation
+            animation: "spin 40s linear infinite", // Apply spinning animation
           }}
         />
         <div className='vl vl-edge'></div>
@@ -36,12 +39,15 @@ function Hero() {
         <div className='vl vl-edge-mid'></div>
         <div className='vl vl-center'></div>
       </div>
+
+      {/* right hand side decorations */}
       <div className='decoration-rhs decoration'>
         <FaGear
-          className='gear'
+          className='gear gear-rhs'
           style={{
             zIndex: 1,
-            animation: "spin 4s linear infinite", // Apply spinning animation
+            animation: "spin 8s linear infinite", // Apply spinning animation
+            animationDelay: "-3s", // start at different angles
           }}
         />
         <div className='vl vl-edge'></div>
@@ -49,6 +55,7 @@ function Hero() {
         <div className='vl vl-edge-mid'></div>
         <div className='vl vl-center'></div>
       </div>
+
       <h1 className='innovate-her'>
         Innovate<span>HER</span>
       </h1>
@@ -63,7 +70,6 @@ function Hero() {
               verticalAlign: "middle",
               color: "#d0cdea",
               fontSize: "2rem",
-              background: "#000000",
             }}
           />
           <h2 className='description'>March 28th, 2026 8:30AM - 5:30PM</h2>
@@ -80,7 +86,6 @@ function Hero() {
               verticalAlign: "middle",
               color: "#d0cdea",
               fontSize: "2rem",
-              background: "#000000",
             }}
           />
           <h2
@@ -94,9 +99,8 @@ function Hero() {
       <div className='rsvp-container'>
         <button className='rsvp-btn'>
           <svg
-            width='396'
-            height='119'
             viewBox='0 0 396 119'
+            preserveAspectRatio='xMidYMid meet'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
@@ -105,7 +109,9 @@ function Hero() {
               fill='#4D4D8C'
             />
           </svg>
-          <span>RSVP NOW</span>
+          <div className='rsvp-rect'>
+            <h3>RSVP NOW</h3>
+          </div>
         </button>
       </div>
       <CountDown />
