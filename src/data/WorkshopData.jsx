@@ -39,7 +39,7 @@ export const workshopData = [
     pronouns: "",
     role: "Process Design Team Lead at McCue Engineering Contractors; Director at Expansion Works",
     focusAreas:
-      "Cecilia: Her work focuses on process design and quality systems for water and wastewater treatment, leading multidisciplinary projects, developing engineering standards, and advancing organizational knowledge. She is also committed to mentorship, training, and promoting women in STEM. Marialejandra: She focuses on community engagement, leadership development, and organizational effectiveness, providing learning solutions to strengthen equity, diversity, and inclusion through her firm, Expansion Works.",
+      "Cecilia: Her work focuses on process design and quality systems for water and wastewater treatment, leading multidisciplinary projects, developing engineering standards, and advancing organizational knowledge. She is also committed to mentorship, training, and promoting women in STEM.\n\nMarialejandra: She focuses on community engagement, leadership development, and organizational effectiveness, providing learning solutions to strengthen equity, diversity, and inclusion through her firm, Expansion Works.",
     imageUrl: null,
   },
   {
@@ -74,7 +74,7 @@ export const workshopData = [
     pronouns: "She/Her",
     role: "PhD student, UBC Forestry; PhD candidate, Department of Botany, UBC",
     focusAreas:
-      "Kaede: Her research focuses on genome architecture and speciation patterns in conifers, with a particular interest in plant biodiversity and evolution, especially Vaccinium species and pine trees. She combines wet-lab molecular biology techniques with coding and bioinformatics to study evolutionary patterns. Zhiqin: Her research focuses on plant evolution, particularly how positive selection drives adaptive evolution in wild sunflowers, combining bioinformatics and studies of local adaptation.",
+      "Kaede: Her research focuses on genome architecture and speciation patterns in conifers, with a particular interest in plant biodiversity and evolution, especially Vaccinium species and pine trees. She combines wet-lab molecular biology techniques with coding and bioinformatics to study evolutionary patterns.\n\nZhiqin: Her research focuses on plant evolution, particularly how positive selection drives adaptive evolution in wild sunflowers, combining bioinformatics and studies of local adaptation.",
     imageUrl: null,
   },
   {
@@ -118,7 +118,7 @@ export const workshopData = [
     speakerName: "Nirupama Tamvada",
     pronouns: "She/Her",
     role: "Statistician at BC Cancer Research Agency, Regulatory Science Team",
-    focusAreas: "Her work focuses on using real-world health data to study cancer outcomes, combining statistics, coding, and machine learning to generate insights that improve health care for British Columbians..",
+    focusAreas: "Her work focuses on using real-world health data to study cancer outcomes, combining statistics, coding, and machine learning to generate insights that improve health care for British Columbians.",
     imageUrl: null,
   },
 ];
