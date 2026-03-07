@@ -1,0 +1,32 @@
+.countdown-container {
+  width: 80%;
+  padding: 36px 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #4d4d8c;
+  border-radius: 30px;
+  box-shadow: 2px 2px 80px #f4f4f4;
+}
+
+.time-value {
+  font-size: 4rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #e6b8cf 19%, #a9a9e4 89%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.time-label {
+  color: #d0cdea;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  line-height: 1;
+}
