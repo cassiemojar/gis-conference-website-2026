@@ -1,6 +1,6 @@
-.main-title {
+.SupportSectionContainer .main-title {
     text-align: center;
-    color: #EFCCFF;
+    color: #EFCCFF !important;
     font-family: "Josefin Sans", sans-serif !important;
     font-weight: 800 !important;
     margin-bottom: 30px !important;
