@@ -56,13 +56,13 @@ export default function AboutUs() {
           {/* Left Column */}
           <div className="about-text">
             <Typography
-              variant="h4"
+              variant="h1"
               sx={{
                 textAlign: "center",
                 color: "#504D8C",
                 fontFamily: "Josefin Sans",
                 fontWeight: "bold",
-                marginBottom: "3rem",
+                marginBottom: "40px",
                 fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
                 textShadow: "4px 3px 11px rgba(255,255,255,0.6)",
               }}
