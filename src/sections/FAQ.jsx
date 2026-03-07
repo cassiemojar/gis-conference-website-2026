@@ -115,8 +115,8 @@ export default function FAQ() {
                     fontFamily="'Josefin Sans', sans-serif"
                     sx={{
                         fontWeight: 'bold',
-                        marginTop: '25px',
                         marginBottom: '10px',
+                        marginTop: '10px',
                         color: '#E8C3D1',
                         fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
                         textAlign: 'center',
