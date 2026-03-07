@@ -15,7 +15,7 @@
   
   .imgs-slide {
     display: flex;
-    animation: 20s slide infinite linear;
+    animation: 30s slide infinite linear;
   }
   
   .imgs-slide img {

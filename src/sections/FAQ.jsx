@@ -116,7 +116,7 @@ export default function FAQ() {
                     sx={{
                         fontWeight: 'bold',
                         marginBottom: '10px',
-                        marginTop: '-100px',
+                        marginTop: '10px',
                         color: '#E8C3D1',
                         fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
                         textAlign: 'center',
