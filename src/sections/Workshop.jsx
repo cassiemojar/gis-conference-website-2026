@@ -15,7 +15,7 @@ function Workshop() {
         variant="h1"
         sx={{
           textAlign: "center",
-          color: "#6E66B4",
+          color: "#f2edf5",
           fontFamily: "Josefin Sans",
           fontWeight: "bold",
           marginBottom: "28px",
@@ -23,7 +23,7 @@ function Workshop() {
           textShadow: "4px 4px 15px rgba(255, 255, 255, 0.28)",
         }}
       >
-        Workshops
+        WORKSHOPS
       </Typography>
 
       <div className="workshop-intro">
