@@ -63,7 +63,7 @@ export default function AboutUs() {
                 fontFamily: "Josefin Sans",
                 fontWeight: "bold",
                 marginBottom: "40px",
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
                 textShadow: "4px 3px 11px rgba(255,255,255,0.6)",
               }}
             >
