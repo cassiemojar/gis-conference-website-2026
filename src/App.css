@@ -76,13 +76,13 @@ p.p2 {
   padding: 5%;
 }
 .Panelist-Background {
-  background-image: linear-gradient(#584d7a, #4d4d8c, #6363ab);
+  background-image: linear-gradient(#584d7a, #4d4d8c, #3f3f7e);
   min-height: 200px;
   padding-top: 5%;
 }
 
 .Prev-Conf-Background {
-  background-image: linear-gradient(#584d7a, #4d4d8c, #6363ab);
+  background-image: linear-gradient(#3f3f7e, #4d4d8c, #6363ab);
   min-height: 200px;
   padding-top: 5%;
 }
