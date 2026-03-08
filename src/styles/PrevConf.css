@@ -3,13 +3,6 @@
     margin-top: -84px;
     padding-top: 80px;
   
-    background: linear-gradient(
-      to bottom,
-      #dcc8d8 0%,     /* pink start */
-      #d6c5da 25%,    /* soft lavender */
-      #a89ad0 55%,    /* purple */
-      #7e79c6 100%    /* darker purple bottom */
-    );
   }
 
 .prev-conf-container .main-title {

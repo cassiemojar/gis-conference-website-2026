@@ -71,29 +71,29 @@ p.p2 {
 }
 
 .Workshop-Background {
-/*
-  background-image: linear-gradient(#55559d, #55599e, #584d7a);
+
+  background-image: linear-gradient(#55559d, #9490d3, #7873c7);
   min-height: 200px;
   padding: 5%;
-  */
+ 
   width: 100%;
   margin: 0;
   padding: 0;
 }
 .Panelist-Background {
-  background-image: linear-gradient(#584d7a, #4d4d8c, #3f3f7e);
+  background-image: linear-gradient(#7873c7, #8683c6, #988dba, #dcc8d8);
   min-height: 200px;
   padding-top: 5%;
 }
 
 .Prev-Conf-Background {
-  background-image: linear-gradient(#3f3f7e, #4d4d8c, #6363ab);
+  background-image: linear-gradient(#dcc8d8, #a89ad0, #7e79c6);
   min-height: 200px;
   padding-top: 5%;
 }
 
 .Sponsor-FAQ-Team-Background {
-  background-image: linear-gradient(#6363ab, #5a4067);
+  background-image: linear-gradient(#7e79c6, #5a4067);
   min-height: 200px;
   display: flex;
   flex-wrap: wrap;

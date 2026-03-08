@@ -6,15 +6,6 @@
     width: 100%;
     padding: 90px 0 120px;
   
-    background: linear-gradient(
-      to bottom,
-      #7f7bcc 0%,
-      #9490d3 30%,
-      #a7a0d8 55%,
-      #918cd2 75%,
-      #7f7acc 90%,
-      #7873c7 100%
-    );
   }
   
   .workshop-intro {
