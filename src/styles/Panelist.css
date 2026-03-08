@@ -4,8 +4,16 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 80px 5% 100px;
+    padding: 80px 5% 120px;
     color: #ffffff;
+  
+    background: linear-gradient(
+      to bottom,
+      #7873c7 0%,
+      #8683c6 45%,
+      #a79bd0 75%,
+      #dcc8d8 100%
+    );
   }
   
   .panelist-shell {
