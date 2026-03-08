@@ -7,7 +7,7 @@
 
 .prev-conf-container .main-title {
     text-align: center;
-    color: #c7c5e6 !important;
+    color: #7772c0 !important;
     font-family: "Josefin Sans", sans-serif !important;
     font-weight: 800 !important;
     margin-bottom: 40px !important;
@@ -101,7 +101,7 @@
 
 /* Stats styling */
 .stat-number {
-    color: #c2c0e7 !important;
+    color: #625ea6 !important;
     font-family: "Josefin Sans", sans-serif !important;
     font-weight: 700 !important;
     font-size: clamp(3rem, 5vw, 4rem) !important;
@@ -109,7 +109,7 @@
 }
 
 .stat-label {
-    color: #b7b5e0 !important;
+    color: #cfcedf !important;
     font-family: "Josefin Sans", sans-serif !important;
     font-weight: 400 !important;
     font-size: clamp(1.5rem, 3vw, 2.5rem) !important;
