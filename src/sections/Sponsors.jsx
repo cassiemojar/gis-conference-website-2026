@@ -25,7 +25,7 @@ import ethos from '../images/sponsors/booth-ethos.png';
 import geerup from '../images/sponsors/booth-geerup.png';
 import kpmg from '../images/sponsors/booth-kpmg.png';
 import nw from '../images/sponsors/booth-nw.png';
-import rel from '../images/sponsors/booth-relyance.png';
+import ampl from '../images/sponsors/booth-amplitude.png';
 import wics from '../images/sponsors/booth-wics.jpeg';
 import wipa from '../images/sponsors/booth-wipa.jpeg';
 
@@ -39,7 +39,7 @@ export default function Sponsors() {
     ];
 
     const boothLogos = [
-        acuitas, aecom, digibc, esri, ethos, geerup, nw, kpmg, rel, wics, wipa
+        acuitas, aecom, digibc, esri, ethos, geerup, nw, kpmg, ampl, wics, wipa
     ];
 
     // Function to render a single logo with scroll animation
