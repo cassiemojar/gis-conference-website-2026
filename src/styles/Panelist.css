@@ -1,0 +1,208 @@
+.panelist-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 80px 5% 100px;
+    color: #ffffff;
+  }
+  
+  .panelist-shell {
+    width: 100%;
+    max-width: 1100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 40px 26px 24px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  
+  .panelist-header-row {
+    margin-bottom: 34px;
+  }
+  
+  .panelist-subheading {
+    margin: 0;
+    font-size: 1.85rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Josefin Sans", sans-serif;
+    line-height: 1.3;
+  }
+  
+  .panelist-subheading-icon {
+    margin-right: 10px;
+  }
+  
+  .panelist-subheading-text strong {
+    font-weight: 700;
+    color: #ffffff;
+  }
+  
+  .panelist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 34px 42px;
+    justify-items: center;
+    margin-bottom: 42px;
+  }
+  
+  .panelist-card {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    min-height: 185px;
+    background: rgba(116, 101, 168, 0.42);
+    border-radius: 1rem;
+    padding: 26px 20px 18px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+      background 0.25s ease;
+    overflow: hidden;
+  }
+  
+  .panelist-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(17, 10, 39, 0.22);
+    background: rgba(124, 108, 177, 0.55);
+  }
+  
+  .panelist-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    background: linear-gradient(145deg, #efe2ea, #cdbfd8);
+    color: #5b4d87;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.45rem;
+    letter-spacing: 0.04em;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    border: 3px solid rgba(255, 255, 255, 0.45);
+  }
+  
+  .panelist-name {
+    margin: 0 0 12px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  
+  .panelist-info-area {
+    position: relative;
+    min-height: 48px;
+  }
+  
+  .panelist-role,
+  .panelist-bio {
+    margin: 0;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+  
+  .panelist-role {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 600;
+  }
+  
+  .panelist-bio {
+    position: absolute;
+    inset: 0;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.88);
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+  }
+  
+  .panelist-card:hover .panelist-role {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  
+  .panelist-card:hover .panelist-bio {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .panelist-tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    flex-wrap: wrap;
+  }
+  
+  .panelist-tab {
+    flex: 1 1 140px;
+    border: none;
+    border-radius: 999px;
+    padding: 14px 16px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+    transition: background 0.22s ease, color 0.22s ease,
+      transform 0.22s ease;
+  }
+  
+  .panelist-tab:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+  
+  .panelist-tab.active {
+    background: rgba(255, 255, 255, 0.72);
+    color: #6a5ca4;
+  }
+  
+  @media (max-width: 1024px) {
+    .panelist-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+  
+    .panelist-subheading {
+      font-size: 1.55rem;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .panelist-section {
+      padding: 60px 4% 80px;
+    }
+  
+    .panelist-shell {
+      padding: 28px 18px 18px;
+    }
+  
+    .panelist-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  
+    .panelist-card {
+      max-width: 100%;
+    }
+  
+    .panelist-subheading {
+      font-size: 1.3rem;
+    }
+  
+    .panelist-tab {
+      flex: 1 1 calc(50% - 12px);
+    }
+  }
