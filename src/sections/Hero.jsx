@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Box, Typography } from "@mui/material";
-import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
+import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
+import ticket from "../images/rsvp-ticket.png";
 import "../styles/Hero.css";
 
 const EVENT_START = new Date("2026-03-28T09:00:00-07:00").getTime();
@@ -56,19 +57,36 @@ function Hero() {
 
         <div className="hero-meta">
           <div className="hero-meta-row">
-            <EventOutlinedIcon className="hero-meta-icon" />
+            <CalendarMonthOutlinedIcon className="hero-meta-icon" />
             <span>March 28th, 2026</span>
           </div>
 
           <div className="hero-meta-row">
             <LocationOnOutlinedIcon className="hero-meta-icon" />
-            <span>Engineering Student Building @ UBC</span>
+            <a
+              href="https://maps.ubc.ca/?code=ESC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-location-link"
+            >
+              Engineering Student Building @ UBC
+            </a>
           </div>
         </div>
 
-        <button type="button" className="hero-rsvp-button">
-          RSVP NOW
-        </button>
+        <a
+            href="https://forms.gle/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-ticket-link"
+            aria-label="RSVP Now"
+            >
+            <img
+                src={ticket}
+                alt="RSVP Now"
+                className="hero-ticket-button"
+            />
+        </a>
 
         <div className="hero-status-text">
           {timeLeft.isLive ? "Event Live" : "Countdown to Event"}
