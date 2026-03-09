@@ -82,7 +82,7 @@ const AccordionItem = ({ question, answer }) => {
                         marginTop: "-16px",
                         backgroundColor: "transparent",
                         minHeight: "0",
-                        maxHeight: "48px"
+                        maxHeight: "100px",
                     }}
                 >
                     <Typography
