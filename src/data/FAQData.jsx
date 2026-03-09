@@ -6,7 +6,7 @@ export const FAQData = [
                 Early Bird (Mar 1–7): $10<br />
                 Regular (Mar 8–19): $15<br />
                 Late (Mar 20–27): $20<br />
-                Walk-ins are welcome!
+                <strong>Walk-ins are welcome!</strong>
             </>
         )
     },
