@@ -48,9 +48,9 @@ function ImageSlider({ images }) {
   );
 }
 
-export default function AboutUs() {
+function AboutUs() {
   return (
-    <Box id="AboutUs" className="about-us">
+    <Box id="About" className="about-us">
       <div className="about-body">
         <div className="about-grid">
           {/* Left Column */}
@@ -65,6 +65,7 @@ export default function AboutUs() {
                 marginBottom: "40px",
                 fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem" },
                 textShadow: "4px 3px 11px rgba(255,255,255,0.6)",
+                animation: "slideIn 1s ease-out"
               }}
             >
               ABOUT THE CONFERENCE
@@ -82,3 +83,5 @@ export default function AboutUs() {
     </Box>
   );
 }
+
+export default AboutUs;
