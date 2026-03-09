@@ -15,7 +15,7 @@ function Workshop() {
         variant="h1"
         sx={{
           textAlign: "center",
-          color: "#f2edf5",
+          color: "#EFCCFF",
           fontFamily: "Josefin Sans",
           fontWeight: "bold",
           marginBottom: "28px",
