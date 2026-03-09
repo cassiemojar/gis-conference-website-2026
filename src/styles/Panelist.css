@@ -5,7 +5,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    padding: 80px 5% 120px;
+    padding: 80px 5%;
     color: #ffffff;
 
   }
@@ -184,7 +184,7 @@
   
   @media (max-width: 700px) {
     .panelist-section {
-      padding: 60px 4% 80px;
+      padding: 60px 4%;
     }
   
     .panelist-shell {
