@@ -58,11 +58,17 @@ function Hero() {
         <div className="hero-meta">
           <div className="hero-meta-row">
             <CalendarMonthOutlinedIcon className="hero-meta-icon" />
-            <span>March 28th, 2026</span>
+
+            <div className="hero-date-time-text">
+              <span>March 28th, 2026
+              </span>
+              <span className="hero-event-time">9:00 AM - 5:00 PM</span>
+            </div>
           </div>
 
           <div className="hero-meta-row">
             <LocationOnOutlinedIcon className="hero-meta-icon" />
+
             <a
               href="https://maps.ubc.ca/?code=ESC"
               target="_blank"
@@ -75,17 +81,16 @@ function Hero() {
         </div>
 
         <a
-            href="https://bouncelife.com/events/699fb22a003cf40e0442de2a"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hero-ticket-link"
-            aria-label="RSVP Now"
+          href="https://bouncelife.com/events/699fb22a003cf40e0442de2a"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hero-ticket-link"
         >
-            <img
-                src={ticket}
-                alt="RSVP Now"
-                className="hero-ticket-button"
-            />
+          <img
+            src={ticket}
+            alt="RSVP Now"
+            className="hero-ticket-button"
+          />
         </a>
 
         <div className="hero-status-text">
