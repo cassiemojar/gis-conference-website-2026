@@ -99,29 +99,34 @@
     transition: opacity 0.2s ease, text-shadow 0.2s ease;
   }
   
-  .hero-location-link:hover {
-    opacity: 0.95;
-    text-decoration: underline;
-    text-shadow: 0 0 12px rgba(255, 255, 255, 0.16);
-  }
-  
   .hero-ticket-link {
     display: inline-block;
     margin: 10px 0 22px;
+    line-height: 0; /* removes inline spacing */
   }
   
   .hero-ticket-button {
     width: clamp(260px, 28vw, 430px);
     display: block;
     cursor: pointer;
-    transition: transform 0.25s ease, filter 0.25s ease;
+    background: transparent;
+    border-radius: 18px;
+  
+    transform: translateY(0) scale(1);
+  
+    transition:
+      transform 0.35s cubic-bezier(.22,.9,.34,1),
+      filter 0.45s ease;
+
+    will-change: transform, filter;
   }
   
-  .hero-ticket-button:hover {
-    transform: translateY(-3px);
+  .hero-ticket-link:hover .hero-ticket-button {
+    transform: translateY(-2px) scale(1.015);
+  
     filter:
-      drop-shadow(0 0 18px rgba(255, 255, 255, 0.35))
-      drop-shadow(0 10px 30px rgba(92, 84, 168, 0.45));
+      drop-shadow(0 10px 26px rgba(70,60,150,0.35))
+      drop-shadow(0 0 18px rgba(255,210,230,0.65));
   }
   
   .hero-status-text {

@@ -75,12 +75,12 @@ function Hero() {
         </div>
 
         <a
-            href="https://forms.gle/"
+            href="https://bouncelife.com/events/699fb22a003cf40e0442de2a"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-ticket-link"
             aria-label="RSVP Now"
-            >
+        >
             <img
                 src={ticket}
                 alt="RSVP Now"
