@@ -38,8 +38,8 @@ const AgendaItem = ({ time, name, location, isLast }) => {
           <div className='separator-horiz-line'></div>
         </div>
         <div className='name-loc-card'>
-          <p className='p1 event-name'>{name}</p>
-          <p className='p1 loc'>@ {location}</p>
+          <p className='event-name'>{name}</p>
+          <p className='loc'>@ {location}</p>
         </div>
       </div>
     </Box>
@@ -50,19 +50,20 @@ export default function Agenda() {
   return (
     <div className='agenda'>
       <Typography
-        variant="h1"
+        variant='h1'
         sx={{
           textAlign: "center",
           color: "#D0CDEA",
           fontFamily: "Josefin Sans",
           fontWeight: "bold",
           marginBottom: "40px",
-          fontSize: {       // Responsive font size
+          fontSize: {
+            // Responsive font size
             xs: "2.4rem",
             sm: "3.2rem",
             md: "4.5rem",
             lg: "5.5rem",
-          }, 
+          },
           animation: "slideIn 1s ease-out", // Apply slide-in animation
         }}
       >

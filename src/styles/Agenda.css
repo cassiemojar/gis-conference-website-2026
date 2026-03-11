@@ -45,12 +45,17 @@
 
 .name-loc-card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 4fr 2fr;
   padding: 8px 16px;
   background: var(--bg-card);
   border-radius: 16px;
   color: black;
   box-shadow: var(--glow);
+}
+
+.event-name,
+.loc {
+  font-size: 1.25rem;
 }
 
 .separator {
@@ -82,7 +87,7 @@
 }
 
 .separator-vert-line-mobile {
-  bottom: calc((var(--grid-gap) + 2.5 * var(--circle-size)) * -1);
+  bottom: calc((var(--grid-gap) + 3.2 * var(--circle-size)) * -1);
 }
 
 .separator-horiz-line {
@@ -93,4 +98,15 @@
   left: var(--circle-size);
   right: calc(var(--grid-gap) / 2 * -1);
   box-shadow: var(--glow);
+}
+
+@media (max-width: 768px) {
+  .event-name,
+  .loc {
+    font-size: 1rem;
+  }
+
+  .name-loc-card {
+    grid-template-columns: 6fr 2fr;
+  }
 }
