@@ -1,11 +1,17 @@
 import { Typography, Box } from "@mui/material";
+import { useState } from "react";
 import "../styles/Keynote.css";
 import { KeynoteData } from "../data/KeynoteData.jsx";
 
 export default function Keynote() {
+  const [flippedIndex, setFlippedIndex] = useState(null);
+
+  const handleCardClick = (index) => {
+    setFlippedIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <Box id="Keynote" className="keynote">
-      {/* Heading */}
+    <Box id="Keynote" className="keynote" onClick={() => setFlippedIndex(null)}>
       <Typography
         variant="h1"
         sx={{
@@ -14,42 +20,46 @@ export default function Keynote() {
           fontFamily: "Josefin Sans",
           fontWeight: "bold",
           marginBottom: "40px",
-          fontSize: {xs: "2.4rem",
-                    sm: "3.2rem", 
-                    md: "4.5rem"},
+          fontSize: { xs: "2.4rem", sm: "3.2rem", md: "4.5rem" },
           textShadow: "4px 4px 15px rgba(255, 255, 255, 0.3)",
         }}
       >
         KEYNOTE SPEAKERS
       </Typography>
-      <div className="keynote-grid">
-        {KeynoteData.speakers.map((speaker, index) => (
-          <div className="keynote-block" key={index}>
-            <h3 className="keynote-subheader">{speaker.type}</h3>
 
-            <div className="keynote-card">
-              {speaker.image ? (
-                <img src={speaker.image} className="speaker-circle" />
-              ) : (
-                <div className="speaker-circle"></div>
-              )}
+      <div className="keynote-grid" onClick={(e) => e.stopPropagation()}>
+        {KeynoteData.speakers.map((speaker, index) => {
+          const isFlipped = flippedIndex === index;
+          return (
+            <div className="keynote-block" key={index}>
+              <h3 className="keynote-subheader">{speaker.type}</h3>
 
-              <h4 className="speaker-name">{speaker.name}</h4>
-              <div className="speaker-details-area">
-            
-                <div className="speaker-default-content">
-                  <p className="speaker-role">{speaker.role}</p>
+              <div
+                className={`keynote-card ${isFlipped ? "is-flipped" : ""}`}
+                onClick={(e) => { e.stopPropagation(); handleCardClick(index); }}
+              >
+                {speaker.image ? (
+                  <img src={speaker.image} alt={speaker.name} className="speaker-circle" />
+                ) : (
+                  <div className="speaker-circle"></div>
+                )}
+
+                <h4 className="speaker-name">{speaker.name}</h4>
+
+                <div className="speaker-details-area">
+                  <div className="speaker-default-content">
+                    <p className="speaker-role">{speaker.role}</p>
+                  </div>
+
+                  <div className="speaker-hover-content">
+                    <p className="speaker-role">{speaker.role}</p>
+                    <p className="speaker-desc">{speaker.description}</p>
+                  </div>
                 </div>
-
-
-                <div className="speaker-hover-content">
-                  <p className="speaker-role">{speaker.role}</p>
-                  <p className="speaker-desc">{speaker.description}</p>
-                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        ))}
+          );
+        })}
       </div>
     </Box>
   );

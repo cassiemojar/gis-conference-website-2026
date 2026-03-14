@@ -6,11 +6,21 @@ import { workshopData } from "../data/WorkshopData";
 function Workshop() {
   const tabNames = Object.keys(workshopData);
   const [activeTab, setActiveTab] = useState(tabNames[0]);
+  const [flippedIndex, setFlippedIndex] = useState(null);
 
   const activeCategory = useMemo(() => workshopData[activeTab], [activeTab]);
 
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setFlippedIndex(null);
+  };
+
+  const handleCardClick = (index) => {
+    setFlippedIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <Box id="Workshop" className="workshop-section">
+    <Box id="Workshop" className="workshop-section" onClick={() => setFlippedIndex(null)}>
       <Typography
         variant="h1"
         sx={{
@@ -41,35 +51,40 @@ function Workshop() {
         </ul>
       </div>
 
-      <div className="workshop-shell">
+      <div className="workshop-shell" onClick={(e) => e.stopPropagation()}>
         <div className="workshop-grid">
-          {activeCategory.workshops.map((item, index) => (
-            <div className="workshop-card" key={`${activeTab}-${index}`}>
-              <p className="workshop-time">{item.time}</p>
-              <p className="workshop-topic-line">
-                <strong>{item.topic}</strong> <span>led by:</span>
-              </p>
+          {activeCategory.workshops.map((item, index) => {
+            const isFlipped = flippedIndex === index;
+            return (
+              <div
+                className={`workshop-card ${isFlipped ? "is-flipped" : ""}`}
+                key={`${activeTab}-${index}`}
+                onClick={(e) => { e.stopPropagation(); handleCardClick(index); }}
+              >
+                <p className="workshop-time">{item.time}</p>
+                <p className="workshop-topic-line">
+                  <strong>{item.topic}</strong> <span>led by:</span>
+                </p>
 
-              <div className="workshop-avatar">
-                <span>{item.initials}</span>
-              </div>
-
-              <h3 className="workshop-name">{item.name}</h3>
-
-              <div className="workshop-details-area">
-                <div className="workshop-default-content">
-                  <p className="workshop-role">{item.role}</p>
+                <div className="workshop-avatar">
+                  <span>{item.initials}</span>
                 </div>
 
-                <div className="workshop-hover-content">
-                  <p className="workshop-role workshop-role-hover">
-                    {item.role}
-                  </p>
-                  <p className="workshop-description">{item.description}</p>
+                <h3 className="workshop-name">{item.name}</h3>
+
+                <div className="workshop-details-area">
+                  <div className="workshop-default-content">
+                    <p className="workshop-role">{item.role}</p>
+                  </div>
+
+                  <div className="workshop-hover-content">
+                    <p className="workshop-role workshop-role-hover">{item.role}</p>
+                    <p className="workshop-description">{item.description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="workshop-tabs">
@@ -78,7 +93,7 @@ function Workshop() {
               key={tab}
               type="button"
               className={`workshop-tab ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabChange(tab)}
             >
               {tab}
             </button>

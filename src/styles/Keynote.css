@@ -105,12 +105,22 @@
   overflow-y: auto;
 }
 
-.keynote-card:hover .speaker-default-content {
+.keynote-card:hover,
+.keynote-card.is-flipped {
+  transform: translateY(-4px);
+  background: rgba(116, 101, 168, 0.48);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 14px 28px rgba(45, 34, 88, 0.18);
+}
+
+.keynote-card:hover .speaker-default-content,
+.keynote-card.is-flipped .speaker-default-content {
   opacity: 0;
   transform: translateY(-8px);
 }
 
-.keynote-card:hover .speaker-hover-content {
+.keynote-card:hover .speaker-hover-content,
+.keynote-card.is-flipped .speaker-hover-content {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
