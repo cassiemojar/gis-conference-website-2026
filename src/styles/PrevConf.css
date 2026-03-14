@@ -32,22 +32,26 @@
     inset: 0;
     background-size: cover;
     background-position: center;
-    transition: transform 0.5s ease;
+    transition: opacity 0.3s ease;
     border-radius: inherit;
 }
 
-.carousel-blend {
+/* .carousel-blend {
     position: absolute;
     inset: 0;
     z-index: 1;
     background: rgba(134, 131, 198, 0.8);
     mix-blend-mode: multiply;
     transition: opacity 0.4s ease;
-}
+} */
 
 .glass-card.is-paused .carousel-blend,
 .glass-card.is-paused .carousel-overlay {
     opacity: 0;
+}
+
+.glass-card:hover .carousel-image {
+    opacity: 0.75;
 }
 
 .carousel-overlay {
@@ -73,7 +77,7 @@
 }
 
 .nav-arrow {
-    color: #6363AB;
+    color: #efefef;
     font-size: 4rem !important;
     cursor: pointer;
     filter: drop-shadow(0 6px 8px rgba(220, 220, 220, 0.6));
