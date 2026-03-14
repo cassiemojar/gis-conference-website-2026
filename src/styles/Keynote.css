@@ -23,13 +23,23 @@
 
 /* Card */
 .keynote-card {
-  background: var(--glass-bg);
-  padding: 2rem;
-  border-radius: var(--card-radius);
-  box-shadow: var(--glow);
+  min-height: 355px;
+  background: rgba(116, 101, 168, 0.34);
+  border-radius: 1rem;
+  padding: 18px 18px 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 8px 20px rgba(54, 44, 99, 0.12);
   backdrop-filter: blur(6px);
   text-align: center;
   flex-grow: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.keynote-card:hover {
+  transform: translateY(-4px);
+  background: rgba(116, 101, 168, 0.48);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 14px 28px rgba(45, 34, 88, 0.18);
 }
 
 /* Block: subheading & card pair */
@@ -44,29 +54,99 @@
   color: #ffffff;
   margin: 2%;
   font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
 }
 
 /* Placeholder circle for speaker photo */
 .speaker-circle {
-  width: 9rem;
-  height: 9rem;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
-  border: 2px dashed #999;
-  margin: 0 auto 1rem auto;
-  background: rgba(255, 255, 255, 0.3);
+  margin: 0 auto 16px;
+  background: linear-gradient(145deg, #f2edf5, #d8d0e6);
+  border: 3px solid rgba(255, 255, 255, 0.42);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  object-fit: cover;
+  display: block;
 }
 
 /* Name */
 .speaker-name {
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.4rem;
+  margin: 0 0 6px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-/* Description */
+.speaker-details-area {
+  position: relative;
+  min-height: 102px;
+}
+
+/* Match workshop default/hover content transitions */
+.speaker-default-content,
+.speaker-hover-content {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.speaker-default-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.speaker-hover-content {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.keynote-card:hover .speaker-default-content {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.keynote-card:hover .speaker-hover-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Scrollbar styling */
+.speaker-hover-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.speaker-hover-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.speaker-hover-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+}
+
+.speaker-role {
+  margin: 0 0 12px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: center;
+}
+
 .speaker-desc {
-  font-size: 0.9rem;
-  opacity: 0.9;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
 }
 
 /* Mobile */

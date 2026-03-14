@@ -35,10 +35,20 @@ export default function Keynote() {
               )}
 
               <h4 className="speaker-name">{speaker.name}</h4>
+              <div className="speaker-details-area">
+            
+                <div className="speaker-default-content">
+                  <p className="speaker-role">{speaker.role}</p>
+                </div>
 
-              <p className="speaker-desc">{speaker.description}</p>
+
+                <div className="speaker-hover-content">
+                  <p className="speaker-role">{speaker.role}</p>
+                  <p className="speaker-desc">{speaker.description}</p>
+                </div>
             </div>
           </div>
+        </div>
         ))}
       </div>
     </Box>
