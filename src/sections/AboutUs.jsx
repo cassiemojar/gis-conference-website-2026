@@ -1,14 +1,16 @@
 import "../styles/AboutUs.css";
 import { Typography, Box } from "@mui/material";
+import { Modal, Backdrop, Fade } from "@mui/material";
 import { AboutUsData } from "../data/AboutUsData.jsx";
 import { useState, useEffect } from "react";
 
 function ImageSlider({ images }) {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || open) return;
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 3000);
@@ -24,7 +26,7 @@ function ImageSlider({ images }) {
       <div className="shape-top-right"></div>
       <div className="shape-bottom-left"></div>
 
-      <div className="about-image">
+      <div className="about-image" onClick={() => setOpen(true)}>
         {images.map((img, i) => (
           <img
             key={i}
@@ -40,11 +42,45 @@ function ImageSlider({ images }) {
           <span
             key={i}
             className={`dot ${i === current ? "active" : ""}`}
-            onClick={() => setCurrent(i)}
+            onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
           />
         ))}
       </div>
-    </div>
+    <Modal
+      open={open}
+      onClose={() => setOpen(false)}
+      closeAfterTransition
+      BackdropComponent={Backdrop}
+      BackdropProps={{ timeout: 500 }}
+    >
+      <Fade in={open}>
+        <Box
+          onClick={() => setOpen(false)}
+          sx={{
+            position: "fixed",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "rgba(0,0,0,0.9)",
+            cursor: "zoom-out",
+          }}
+        >
+          <img
+            src={images[current]}
+            alt="Full view"
+            style={{
+              maxWidth: "90%",
+              maxHeight: "85vh",
+              borderRadius: "10px",
+              border: "3px solid white",
+              boxShadow: "0 0 30px rgba(0,0,0,0.5)",
+            }}
+          />
+        </Box>
+      </Fade>
+    </Modal>
+  </div>
   );
 }
 
