@@ -88,8 +88,8 @@
 }
 
 .workshop-avatar {
-  width: 92px;
-  height: 92px;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   margin: 0 auto 16px;
   background: linear-gradient(145deg, #f2edf5, #d8d0e6);
@@ -103,6 +103,14 @@
   letter-spacing: 0.04em;
   border: 3px solid rgba(255, 255, 255, 0.42);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+
+.workshop-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .workshop-name {

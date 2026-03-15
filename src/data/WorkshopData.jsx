@@ -1,3 +1,18 @@
+import alysha from '../images/speakers/alysha.png'
+import kaede from '../images/speakers/kaede.png'
+import zhiqin from '../images/speakers/zhiqin.png'
+import maddy from '../images/speakers/maddy.png'
+import shefali from '../images/speakers/shefali.png'
+import cecilia from '../images/speakers/cecilia.jpg'
+import marialejandra from '../images/speakers/marialejandra.png'
+import guangrui from '../images/speakers/guangrui.png'
+import angie from '../images/speakers/angie.png'
+import kira from '../images/speakers/kira.png'
+import priscilla from '../images/speakers/priscilla.png'
+import nirupama from '../images/speakers/nirupama.png'
+import rebeca from '../images/speakers/rebeca.png'
+
+
 export const workshopData = {
     Science: {
       workshops: [
@@ -5,7 +20,8 @@ export const workshopData = {
           time: "11:00AM - 12:00PM",
           topic: "TBD!!!",
           initials: "AP",
-          name: "Alysa Parker (Pro/nouns)",
+          image: alysha,
+          name: "Alysha Parker (Pro/nouns)",
           role: "Environmental Program Lead – FortisBC",
           description:
             "Alysha Parker has a diverse background spanning wildlife monitoring, major infrastructure projects, and resource development. She has held roles at BC Hydro's Site C, Kiewit on the Trans Mountain Pipeline, and Teck Resources, and now drives environmental stewardship across complex energy initiatives at FortisBC.",
@@ -14,6 +30,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Introduction to GWAS: Genome-wide association studies (Application of Bioinformatics)",
           initials: "KH",
+          image: kaede,
           name: "Kaede Hirabayashi (She/Her)",
           role: "PhD student in Tom Booker lab – UBC Forestry and Environmental Stewardship",
           description:
@@ -23,6 +40,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Introduction to GWAS: Genome-wide association studies (Application of Bioinformatics)",
           initials: "ZL",
+          image: zhiqin,
           name: "Zhiqin Long (She/Her)",
           role: "PhD candidate – Botany Department of UBC",
           description:
@@ -37,6 +55,7 @@ export const workshopData = {
           time: "11:00AM - 12:00PM",
           topic: "Designing Tech for Everyone: How Software Teams Build Products for Real People",
           initials: "MP",
+          image: maddy,
           name: "Maddy Paulson (She/Her)",
           role: "Software Developer in the Graduate Technology Leadership Program – TELUS",
           description:
@@ -46,6 +65,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Workshop Topic",
           initials: "SP",
+          image: shefali,
           name: "Shefali Pearson (She/Her)",
           role: "Lead Game Product Manager – Electronic Arts",
           description:
@@ -60,6 +80,7 @@ export const workshopData = {
           time: "11:00AM - 12:00PM",
           topic: "Where Engineering Meets Sustainability and Social Equity",
           initials: "CGM",
+          image: cecilia,
           name: "Cecilia Garcia Marra (She/Her)",
           role: "Process Design Team Lead – McCue Engineering Contractors",
           description:
@@ -69,6 +90,7 @@ export const workshopData = {
           time: "11:00AM - 12:00PM",
           topic: "Where Engineering Meets Sustainability and Social Equity",
           initials: "MRV",
+          image: marialejandra,
           name: "Marialejandra Reyes Valerio (She/Her)",
           role: "Director – Expansion Works",
           description:
@@ -78,6 +100,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Discover Semiconductors and the Semiconductor Industry",
           initials: "GX",
+          image: guangrui,
           name: "Guangrui Xia (She/Her)",
           role: "Professor – Department of Materials Engineering, UBC",
           description:
@@ -92,6 +115,7 @@ export const workshopData = {
           time: "11:00AM - 12:00PM",
           topic: "Ideas That Redefine What’s Possible",
           initials: "AF",
+          image: angie,
           name: "Angie Feret (She/Her)",
           role: "Motion Graphics Designer Specializing in Future User Interface Design and Masters Of Digital Media Student and CDM",
           description:
@@ -101,6 +125,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Building a Game Character Through an Accessible 3D Pipeline: Understanding the Full Process and Where to Begin",
           initials: "KD",
+          image: kira,
           name: "Kira Dou (She/Her)",
           role: "Grad Student – Centre for Digital Media",
           description:
@@ -115,6 +140,7 @@ export const workshopData = {
           time: "11:00AM - 12:00PM",
           topic: "Getting Acquainted Over Math; a Matriarch of Mathematics Welcomes You",
           initials: "PG",
+          image: priscilla,
           name: "Priscilla (Cindy) Greenwood (She/Her)",
           role: "Emeritus Professor Specializing in Stochastic Modelling",
           description:
@@ -124,6 +150,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Careers in Public Health - From Data to Decisions: How Models Can Support Public Health Decisions",
           initials: "NT",
+          image: nirupama,
           name: "Nirupama Tamvada (She/Her)",
           role: "Statistician – BC Cancer Research Agency on the Regulatory Science Team",
           description:
@@ -133,6 +160,7 @@ export const workshopData = {
           time: "2:00PM - 3:00PM",
           topic: "Careers in Public Health - From Data to Decisions: How Models Can Support Public Health Decisions",
           initials: "RF",
+          image: rebeca,
           name: "Rebeca Falcao (She/Her)",
           role: "Post Doctoral Fellow – BC Center for Disease Control",
           description:

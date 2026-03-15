@@ -67,7 +67,12 @@ function Workshop() {
                 </p>
 
                 <div className="workshop-avatar">
-                  <span>{item.initials}</span>
+                    {item.image ? (
+                        <img src={item.image} alt={item.name} className="workshop-avatar-img" />
+                    ) : (
+                    <span>{item.initials}</span>
+                    )}
+                    
                 </div>
 
                 <h3 className="workshop-name">{item.name}</h3>

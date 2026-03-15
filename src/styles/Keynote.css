@@ -60,8 +60,8 @@
 
 /* Placeholder circle for speaker photo */
 .speaker-circle {
-  width: 92px;
-  height: 92px;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   margin: 0 auto 16px;
   background: linear-gradient(145deg, #f2edf5, #d8d0e6);
