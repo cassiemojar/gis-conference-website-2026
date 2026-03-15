@@ -2,6 +2,8 @@ import "../styles/Agenda.css";
 import { timelineData } from "../data/timelineData";
 import { Typography, Box, useMediaQuery, useTheme } from "@mui/material";
 import { useInView } from "react-intersection-observer";
+import { FaGear } from "react-icons/fa6";
+import { MdScience } from "react-icons/md";
 
 const AgendaItem = ({ time, name, location, isLast }) => {
   const theme = useTheme();
@@ -49,6 +51,8 @@ const AgendaItem = ({ time, name, location, isLast }) => {
 export default function Agenda() {
   return (
     <div className='agenda'>
+      <FaGear className='gear' />
+      <MdScience className='flask' />
       <Typography
         variant='h1'
         sx={{
