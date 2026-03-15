@@ -74,7 +74,7 @@ function ImageSlider({ images }) {
               maxHeight: "85vh",
               borderRadius: "10px",
               border: "3px solid white",
-              boxShadow: "0 0 30px rgba(0,0,0,0.5)",
+              textShadow: "4px 4px 15px rgba(255, 255, 255, 0.3)",
             }}
           />
         </Box>

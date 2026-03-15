@@ -12,7 +12,7 @@
     font-weight: 800 !important;
     margin-bottom: 40px !important;
     font-size: clamp(2.5rem, 6vw, 5.5rem) !important;
-    text-shadow: 4px 3px 11px rgba(0, 0, 0, 0.3);
+    text-shadow: 4px 4px 25px rgba(255, 253, 253, 0.742);
 }
 
 .glass-card {

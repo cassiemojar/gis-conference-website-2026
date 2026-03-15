@@ -20,7 +20,7 @@ function Panelist() {
           fontWeight: "bold",
           marginBottom: "36px",
           fontSize: { xs: "2.4rem", sm: "3.2rem", md: "4.5rem" },
-          textShadow: "4px 4px 15px rgba(1, 1, 1, 0.4)",
+          textShadow: "4px 4px 15px rgba(255, 255, 255, 0.3)",
         }}
       >
         STEAM Panelists

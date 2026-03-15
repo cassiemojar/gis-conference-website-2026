@@ -61,6 +61,7 @@ export default function Agenda() {
           fontFamily: "Josefin Sans",
           fontWeight: "bold",
           marginBottom: "40px",
+          textShadow: "4px 4px 15px rgba(255, 255, 255, 0.3)",
           fontSize: {
             // Responsive font size
             xs: "2.4rem",
