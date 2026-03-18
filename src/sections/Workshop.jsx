@@ -48,7 +48,7 @@ function Workshop() {
           <li>
             During lunch, attendees are encouraged to go to our career and
             networking fair with booths from sponsors and partners, which will
-            be set up in Location TBD.
+            be set up in ESC.
           </li>
         </ul>
       </div>
