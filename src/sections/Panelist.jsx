@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import "../styles/Panelist.css";
 import { panelistData } from "../data/PanelistData";
+import { FaGear } from "react-icons/fa6";
 
 function Panelist() {
   const tabNames = Object.keys(panelistData);
@@ -23,6 +24,9 @@ function Panelist() {
 
   return (
     <Box id="Panelist" className="panelist-section" onClick={() => setFlippedIndex(null)}>
+      <FaGear className="section-gear section-gear--tr" />
+      <FaGear className="section-gear section-gear--bl" />
+      <FaGear className="section-gear section-gear--bl-sm" />
       <Typography
         variant="h1"
         sx={{

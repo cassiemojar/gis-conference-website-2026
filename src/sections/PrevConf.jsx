@@ -106,10 +106,16 @@ function PrevConf() {
                             cursor: 'pointer',
                         }}
                     >
-                        <Box
-                            className="carousel-image"
-                            sx={{ backgroundImage: `url(${images[currentIndex]})` }}
-                        />
+                        {images.map((img, i) => (
+                            <Box
+                                key={i}
+                                className="carousel-image"
+                                sx={{
+                                    backgroundImage: `url(${img})`,
+                                    opacity: i === currentIndex ? 1 : 0,
+                                }}
+                            />
+                        ))}
 
                         <Box className="carousel-blend" />
 

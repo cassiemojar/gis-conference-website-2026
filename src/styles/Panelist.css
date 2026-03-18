@@ -6,6 +6,8 @@
     width: 100%;
     padding: 80px 5%;
     color: #ffffff;
+    position: relative;
+    isolation: isolate;
   }
   
   .panelist-shell {
@@ -244,3 +246,51 @@
       flex: 1 1 calc(50% - 12px);
     }
   }
+
+/* Decorative gears */
+.section-gear {
+  position: absolute;
+  color: #9e97d7;
+  opacity: 0.2;
+  font-size: 200px;
+  filter: drop-shadow(0 0 8px white) drop-shadow(0 0 20px #b8b4ff);
+  will-change: transform;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-gear--tr {
+  top: 16px;
+  right: 16px;
+  animation: gearSpin 20s linear infinite;
+}
+
+.section-gear--tr-sm {
+  top: 150px;
+  right: 140px;
+  font-size: 100px;
+  animation: gearSpin 10s linear infinite reverse;
+}
+
+.section-gear--bl {
+  bottom: 16px;
+  left: 16px;
+  font-size: 160px;
+  animation: gearSpin 14s linear infinite reverse;
+}
+
+.section-gear.section-gear--bl-sm {
+  bottom: 140px;
+  left: 140px;
+  font-size: 90px;
+  animation: gearSpin 8s linear infinite;
+}
+
+@keyframes gearSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .section-gear { display: none; }
+}

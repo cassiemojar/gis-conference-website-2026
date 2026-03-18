@@ -30,7 +30,7 @@
     inset: 0;
     background-size: cover;
     background-position: center;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.8s ease-in-out;
     border-radius: inherit;
 }
 

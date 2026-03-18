@@ -2,6 +2,7 @@ import { Typography, Box } from "@mui/material";
 import { useState } from "react";
 import "../styles/Keynote.css";
 import { KeynoteData } from "../data/KeynoteData.jsx";
+import { FaGear } from "react-icons/fa6";
 
 export default function Keynote() {
   const [flippedIndex, setFlippedIndex] = useState(null);
@@ -12,6 +13,9 @@ export default function Keynote() {
 
   return (
     <Box id="Keynote" className="keynote" onClick={() => setFlippedIndex(null)}>
+      <FaGear className="section-gear section-gear--tl" />
+      <FaGear className="section-gear section-gear--tl-sm" />
+      <FaGear className="section-gear section-gear--br" />
       <Typography
         variant="h1"
         sx={{

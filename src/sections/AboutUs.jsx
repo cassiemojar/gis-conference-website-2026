@@ -31,7 +31,7 @@ function ImageSlider({ images }) {
       <ArrowBackIosNewIcon
         className="nav-arrow"
         onClick={(e) => { e.stopPropagation(); setCurrent((current - 1 + images.length) % images.length); }}
-        sx={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
+        sx={{ position: 'absolute', left: '-8px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
       />
 
       <div className="about-image" onClick={() => setOpen(true)}>
@@ -48,7 +48,7 @@ function ImageSlider({ images }) {
       <ArrowForwardIosIcon
         className="nav-arrow"
         onClick={(e) => { e.stopPropagation(); setCurrent((current + 1) % images.length); }}
-        sx={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
+        sx={{ position: 'absolute', right: '-8px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
       />
 
       <div className="image-dots">

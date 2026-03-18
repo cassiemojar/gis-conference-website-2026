@@ -5,6 +5,8 @@
   text-align: center;
   width: 100%;
   padding: 80px 5%;
+  position: relative;
+  isolation: isolate;
   --content-max-width: 1100px;
   --card-radius: 1.25rem;
   --glass-bg: rgba(255, 255, 255, 0.08);
@@ -185,4 +187,52 @@
   .speaker-name {
     font-size: 1.35rem;
   }
+}
+
+/* Decorative gears */
+.section-gear {
+  position: absolute;
+  color: #9e97d7;
+  opacity: 0.2;
+  font-size: 200px;
+  filter: drop-shadow(0 0 8px white) drop-shadow(0 0 20px #b8b4ff);
+  will-change: transform;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.section-gear--tl {
+  top: 16px;
+  left: 16px;
+  animation: gearSpin 22s linear infinite;
+}
+
+.section-gear.section-gear--tl-sm {
+  top: 200px;
+  left: -18px;
+  font-size: 90px;
+  animation: gearSpin 11s linear infinite reverse;
+}
+
+.section-gear.section-gear--br {
+  bottom: 16px;
+  right: 16px;
+  font-size: 160px;
+  animation: gearSpin 16s linear infinite reverse;
+}
+
+.section-gear--br-sm {
+  bottom: 145px;
+  right: 145px;
+  font-size: 55px;
+  animation: gearSpin 9s linear infinite;
+}
+
+@keyframes gearSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .section-gear { display: none; }
 }
