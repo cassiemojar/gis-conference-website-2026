@@ -86,6 +86,14 @@
     letter-spacing: 0.04em;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
     border: 3px solid rgba(255, 255, 255, 0.45);
+    overflow: hidden;
+  }
+
+  .panelist-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
   }
   
   .panelist-name {
@@ -99,77 +107,107 @@
   .panelist-info-area {
     position: relative;
     min-height: 48px;
+    overflow: hidden;
   }
-  
-  .panelist-role,
-  .panelist-bio {
-    margin: 0;
+
+  .panelist-default-content, .panelist-hover-content {
     transition: opacity 0.22s ease, transform 0.22s ease;
   }
-  
-  .panelist-role {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.72);
-    font-weight: 600;
-  }
-  
-  .panelist-bio {
-    position: absolute;
-    inset: 0;
-    font-size: 0.86rem;
-    line-height: 1.45;
-    color: rgba(255, 255, 255, 0.88);
-    opacity: 0;
-    transform: translateY(8px);
-    pointer-events: none;
-  }
-  
-  .panelist-card:hover .panelist-role {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  
-  .panelist-card:hover .panelist-bio {
+
+  .panelist-default-content {
     opacity: 1;
     transform: translateY(0);
   }
-  
-  .panelist-tabs {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 8px;
-    border-radius: 1.1rem;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    flex-wrap: wrap;
+
+  .panelist-hover-content {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    overflow-y: auto;
   }
   
-  .panelist-tab {
-    flex: 1 1 140px;
-    border: none;
-    border-radius: 999px;
-    padding: 14px 16px;
-    background: transparent;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: "Josefin Sans", sans-serif;
-    cursor: pointer;
-    transition: background 0.22s ease, color 0.22s ease,
-      transform 0.22s ease;
-  }
-  
-  .panelist-tab:hover {
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-  }
-  
-  .panelist-tab.active {
-    background: rgba(255, 255, 255, 0.72);
-    color: #6a5ca4;
-  }
+  /* Scrollbar */
+.panelist-hover-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.panelist-hover-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.panelist-hover-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+}
+
+/* Trigger on both hover and is-flipped */
+.panelist-card:hover .panelist-default-content,
+.panelist-card.is-flipped .panelist-default-content {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.panelist-card:hover .panelist-hover-content,
+.panelist-card.is-flipped .panelist-hover-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.panelist-role {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 600;
+}
+
+.panelist-bio {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.88);
+  text-align: left;
+}
+
+.panelist-tabs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  flex-wrap: wrap;
+}
+
+.panelist-tab {
+  flex: 1 1 140px;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 16px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Josefin Sans", sans-serif;
+  cursor: pointer;
+  transition: background 0.22s ease, color 0.22s ease, transform 0.22s ease;
+}
+
+.panelist-tab:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.panelist-tab.active {
+  background: rgba(255, 255, 255, 0.72);
+  color: #6a5ca4;
+}
+
   
   @media (max-width: 1024px) {
     .panelist-grid {

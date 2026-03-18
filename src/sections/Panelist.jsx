@@ -6,11 +6,21 @@ import { panelistData } from "../data/PanelistData";
 function Panelist() {
   const tabNames = Object.keys(panelistData);
   const [activeTab, setActiveTab] = useState(tabNames[0]);
+  const [flippedIndex, setFlippedIndex] = useState(null);
 
   const activePanel = useMemo(() => panelistData[activeTab], [activeTab]);
 
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    setFlippedIndex(null);
+  };
+
+  const handleCardClick = (index) => {
+    setFlippedIndex((prev) => (prev === index ? null : index));
+  };
+
   return (
-    <Box id="Panelist" className="panelist-section">
+    <Box id="Panelist" className="panelist-section" onClick={() => setFlippedIndex(null)}>
       <Typography
         variant="h1"
         sx={{
@@ -26,32 +36,48 @@ function Panelist() {
         STEAM Panelists
       </Typography>
 
-      <div className="panelist-shell">
+      <div className="panelist-shell" onClick={(e) => e.stopPropagation()}>
         <div className="panelist-header-row">
           <p className="panelist-subheading">
             <span className="panelist-subheading-icon">{activePanel.icon}</span>
             <span className="panelist-subheading-text">
-              <strong>{activePanel.panelTitle}</strong> @ {activePanel.location},
-              {" "}Panelists:
+              <strong>{activePanel.panelTitle}</strong> @ {activePanel.location},{" "}Panelists:
             </span>
           </p>
         </div>
 
         <div className="panelist-grid">
-          {activePanel.panelists.map((person, index) => (
-            <div className="panelist-card" key={`${activeTab}-${index}`}>
-              <div className="panelist-avatar">
-                <span>{person.initials}</span>
-              </div>
+          {activePanel.panelists.map((person, index) => {
+            const isFlipped = flippedIndex === index;
+            return (
+              <div
+                className={`panelist-card ${isFlipped ? "is-flipped" : ""}`}
+                key={`${activeTab}-${index}`}
+                onClick={(e) => { e.stopPropagation(); handleCardClick(index); }}
+              >
+                <div className="panelist-avatar">
+                  {person.image ? (
+                    <img src={person.image} alt={person.name} className="panelist-avatar-img" />
+                  ) : (
+                    <span>{person.initials}</span>
+                  )}
+                </div>
 
-              <h3 className="panelist-name">{person.name}</h3>
+                <h3 className="panelist-name">{person.name}</h3>
 
-              <div className="panelist-info-area">
-                <p className="panelist-role">{person.role}</p>
-                <p className="panelist-bio">{person.bio}</p>
+                <div className="panelist-info-area">
+                  <div className="panelist-default-content">
+                    <p className="panelist-role">{person.role}</p>
+                  </div>
+
+                  <div className="panelist-hover-content">
+                    <p className="panelist-role">{person.role}</p>
+                    <p className="panelist-bio">{person.bio}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="panelist-tabs">
@@ -60,7 +86,7 @@ function Panelist() {
               key={tab}
               type="button"
               className={`panelist-tab ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
+              onClick={() => handleTabChange(tab)}
             >
               {tab}
             </button>
