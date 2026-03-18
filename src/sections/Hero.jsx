@@ -47,33 +47,35 @@ function Hero() {
   }, []);
 
   return (
-    <Box id="Hero" className="hero-section">
-      <div className="hero-background-glow" />
+    <Box
+      id='Hero'
+      className='hero-section'
+    >
+      <div className='hero-background-glow' />
 
-      <div className="hero-content">
-        <Typography className="hero-title">
-          Innovate<span className="hero-title-highlight">HER</span>
+      <div className='hero-content'>
+        <Typography className='hero-title'>
+          Innovate<span className='hero-title-highlight'>HER</span>
         </Typography>
 
-        <div className="hero-meta">
-          <div className="hero-meta-row">
-            <CalendarMonthOutlinedIcon className="hero-meta-icon" />
+        <div className='hero-meta'>
+          <div className='hero-meta-row'>
+            <CalendarMonthOutlinedIcon className='hero-meta-icon' />
 
-            <div className="hero-date-time-text">
-              <span>March 28th, 2026
-              </span>
-              <span className="hero-event-time">9:00 AM - 5:00 PM</span>
+            <div className='hero-date-time-text'>
+              <span>March 28th, 2026</span>
+              <span className='hero-event-time'>9:00 AM - 5:30 PM</span>
             </div>
           </div>
 
-          <div className="hero-meta-row">
-            <LocationOnOutlinedIcon className="hero-meta-icon" />
+          <div className='hero-meta-row'>
+            <LocationOnOutlinedIcon className='hero-meta-icon' />
 
             <a
-              href="https://maps.ubc.ca/?code=ESC"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-location-link"
+              href='https://maps.ubc.ca/?code=ESC'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='hero-location-link'
             >
               Engineering Student Building @ UBC
             </a>
@@ -81,41 +83,41 @@ function Hero() {
         </div>
 
         <a
-          href="https://bouncelife.com/events/699fb22a003cf40e0442de2a"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hero-ticket-link"
+          href='https://bouncelife.com/events/699fb22a003cf40e0442de2a'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='hero-ticket-link'
         >
           <img
             src={ticket}
-            alt="RSVP Now"
-            className="hero-ticket-button"
+            alt='RSVP Now'
+            className='hero-ticket-button'
           />
         </a>
 
-        <div className="hero-status-text">
+        <div className='hero-status-text'>
           {timeLeft.isLive ? "Event Live" : "Countdown to Event"}
         </div>
 
-        <div className="hero-countdown">
-          <div className="hero-time-block">
-            <span className="hero-time-number">{timeLeft.days}</span>
-            <span className="hero-time-label">Days</span>
+        <div className='hero-countdown'>
+          <div className='hero-time-block'>
+            <span className='hero-time-number'>{timeLeft.days}</span>
+            <span className='hero-time-label'>Days</span>
           </div>
 
-          <div className="hero-time-block">
-            <span className="hero-time-number">{timeLeft.hours}</span>
-            <span className="hero-time-label">Hours</span>
+          <div className='hero-time-block'>
+            <span className='hero-time-number'>{timeLeft.hours}</span>
+            <span className='hero-time-label'>Hours</span>
           </div>
 
-          <div className="hero-time-block">
-            <span className="hero-time-number">{timeLeft.minutes}</span>
-            <span className="hero-time-label">Minutes</span>
+          <div className='hero-time-block'>
+            <span className='hero-time-number'>{timeLeft.minutes}</span>
+            <span className='hero-time-label'>Minutes</span>
           </div>
 
-          <div className="hero-time-block">
-            <span className="hero-time-number">{timeLeft.seconds}</span>
-            <span className="hero-time-label">Seconds</span>
+          <div className='hero-time-block'>
+            <span className='hero-time-number'>{timeLeft.seconds}</span>
+            <span className='hero-time-label'>Seconds</span>
           </div>
         </div>
       </div>
