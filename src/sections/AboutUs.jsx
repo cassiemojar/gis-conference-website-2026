@@ -1,6 +1,8 @@
 import "../styles/AboutUs.css";
 import { Typography, Box } from "@mui/material";
 import { Modal, Backdrop, Fade } from "@mui/material";
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { AboutUsData } from "../data/AboutUsData.jsx";
 import { useState, useEffect } from "react";
 
@@ -26,6 +28,12 @@ function ImageSlider({ images }) {
       <div className="shape-top-right"></div>
       <div className="shape-bottom-left"></div>
 
+      <ArrowBackIosNewIcon
+        className="nav-arrow"
+        onClick={(e) => { e.stopPropagation(); setCurrent((current - 1 + images.length) % images.length); }}
+        sx={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
+      />
+
       <div className="about-image" onClick={() => setOpen(true)}>
         {images.map((img, i) => (
           <img
@@ -36,6 +44,12 @@ function ImageSlider({ images }) {
           />
         ))}
       </div>
+
+      <ArrowForwardIosIcon
+        className="nav-arrow"
+        onClick={(e) => { e.stopPropagation(); setCurrent((current + 1) % images.length); }}
+        sx={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', zIndex: 10 }}
+      />
 
       <div className="image-dots">
         {images.map((_, i) => (

@@ -3,9 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 0;
+  padding: 80px 5%;
   width: 100%;
-  /* background-color: black; */
   position: relative;
 
   --circle-size: 33%;
@@ -17,11 +16,11 @@
 .gear,
 .flask {
   z-index: 1;
-  /* font-size: 200px; */
   color: #9e97d7;
   opacity: 0.2;
   position: absolute;
-  filter: drop-shadow(0 0 4px white);
+  filter: drop-shadow(0 0 8px white) drop-shadow(0 0 20px #b8b4ff);
+  will-change: transform;
 }
 
 .gear {
@@ -42,6 +41,8 @@
   justify-content: start;
   gap: var(--grid-gap);
   z-index: 100;
+  width: 100%;
+  max-width: 800px;
 }
 
 .agenda-grid {
@@ -60,12 +61,14 @@
 .agenda-mobile {
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: stretch;
   justify-content: start;
+  gap: 8px;
 }
 
 .event-time {
   text-align: right;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .name-loc-card {
@@ -126,6 +129,10 @@
 }
 
 @media (max-width: 768px) {
+  .agenda {
+    padding: 60px 4%;
+  }
+
   .event-name,
   .loc {
     font-size: 1rem;
@@ -137,5 +144,45 @@
 
   .flask {
     top: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .agenda-mobile .event-time {
+    text-align: left;
+    padding-left: 4px;
+  }
+
+  .agenda-mobile .rhs-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .agenda-mobile .separator {
+    display: none;
+  }
+
+  .agenda-mobile .name-loc-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 12px;
+    padding: 10px 14px;
+  }
+
+  .agenda-mobile .event-name {
+    font-size: 1rem;
+  }
+
+  .agenda-mobile .loc {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+@media (max-width: 480px) {
+  .gear,
+  .flask {
+    display: none;
   }
 }

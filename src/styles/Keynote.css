@@ -18,6 +18,7 @@
   max-width: var(--content-max-width);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: var(--gap);
 }
 
@@ -31,7 +32,6 @@
     0 8px 20px rgba(54, 44, 99, 0.12);
   backdrop-filter: blur(6px);
   text-align: center;
-  flex-grow: 1;
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
@@ -44,7 +44,6 @@
 
 /* Block: subheading & card pair */
 .keynote-block {
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -83,6 +82,7 @@
 .speaker-details-area {
   position: relative;
   min-height: 102px;
+  overflow: hidden;
 }
 
 /* Match workshop default/hover content transitions */
@@ -159,9 +159,30 @@
   text-align: left;
 }
 
-/* Mobile */
+/* Tablet */
 @media (max-width: 900px) {
   .keynote-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .keynote {
+    padding: 60px 4%;
+  }
+
+  .keynote-card {
+    min-height: 320px;
+    padding: 14px 14px 16px;
+  }
+
+  .speaker-circle {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .speaker-name {
+    font-size: 1.35rem;
   }
 }

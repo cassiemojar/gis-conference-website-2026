@@ -45,6 +45,19 @@
   backdrop-filter: blur(6px);
 }
 
+/* Arrow overrides for AboutUs slider */
+.about-image-container .nav-arrow {
+  color: #efefef;
+}
+
+.about-image-container .nav-arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.about-image-container .nav-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
 /* Right Column: Image Box */
 .about-image-container {
   position: relative;
@@ -63,18 +76,9 @@
   border-radius: 0.3rem;
   overflow: hidden;
   box-shadow: var(--glow), inset 0 0 1rem rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.about-image:hover {
-  background-color: rgba(255, 255, 255, 0.15); 
-}
-
-.about-image:hover img.slide.active {
-    opacity: 0.75;
-    transition: opacity 0.3s ease;
-}
 
 .about-image img.slide {
   position: absolute;
@@ -190,8 +194,17 @@
 }
 
 @media (max-width: 768px) {
+  .about-us {
+    padding: 60px 4%;
+  }
+
   .about-image-container {
-    height: 40vw;
+    height: clamp(200px, 55vw, 320px);
+  }
+
+  .shape-top-right,
+  .shape-bottom-left {
+    display: none;
   }
 }
 

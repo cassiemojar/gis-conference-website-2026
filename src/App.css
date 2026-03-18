@@ -71,25 +71,17 @@ p.p2 {
 }
 
 .Workshop-Background {
-
   background-image: linear-gradient(#55559d, #9490d3, #7873c7);
   min-height: 200px;
-  padding: 5%;
- 
-  width: 100%;
-  margin: 0;
-  padding: 0;
 }
 .Panelist-Background {
   background-image: linear-gradient(#7873c7, #8683c6, #988dba, #dcc8d8);
   min-height: 200px;
-  padding-top: 5%;
 }
 
 .Prev-Conf-Background {
   background-image: linear-gradient(#dcc8d8, #a89ad0, #7e79c6);
   min-height: 200px;
-  padding-top: 5%;
 }
 
 .Sponsor-FAQ-Team-Background {
@@ -100,7 +92,35 @@ p.p2 {
   justify-content: center;
 }
 
-/* Responsive Adjustments */
+/* Clip overflow from left/right reveal slides */
+.Hero-Background,
+.About-Us-Background,
+.Agenda-Background,
+.KeyNote-Background,
+.Workshop-Background,
+.Panelist-Background,
+.Prev-Conf-Background,
+.Sponsor-FAQ-Team-Background {
+  overflow: hidden;
+}
+
+/* ── Section reveal animations ── */
+.reveal {
+  opacity: 0;
+  width: 100%;
+  transition: opacity 0.75s ease-out, transform 0.75s ease-out;
+}
+
+.reveal-up    { transform: translateY(50px); }
+.reveal-left  { transform: translateX(-50px); }
+.reveal-right { transform: translateX(50px); }
+
+.reveal.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ── Responsive Adjustments ── */
 @media screen and (max-width: 1023px) {
   .Nav-Component {
     padding-left: 5%;

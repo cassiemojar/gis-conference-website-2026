@@ -129,6 +129,16 @@ function PrevConf() {
                                 }}
                             />
                         </Box>
+
+                        <div className="image-dots">
+                            {images.map((_, i) => (
+                                <span
+                                    key={i}
+                                    className={`dot ${i === currentIndex ? 'active' : ''}`}
+                                    onClick={(e) => { e.stopPropagation(); setCurrentIndex(i); }}
+                                />
+                            ))}
+                        </div>
                     </Box>
 
                     <Box sx={{

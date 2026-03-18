@@ -3,6 +3,18 @@
     white-space: nowrap;
     padding: 20px 0 80px;
   }
+
+  @media (max-width: 600px) {
+    .the-team {
+      padding: 40px 0 60px;
+    }
+
+    .imgs-slide img {
+      height: 64px;
+      width: 64px;
+      margin: 0 12px;
+    }
+  }
   
   .slider {
     display: flex;

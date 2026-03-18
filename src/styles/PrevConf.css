@@ -1,9 +1,7 @@
 .prev-conf-container {
     position: relative;
-    margin-top: -84px;
     padding: 80px 0;
-  
-  }
+}
 
 .prev-conf-container .main-title {
     text-align: center;
@@ -50,9 +48,6 @@
     opacity: 0;
 }
 
-.glass-card:hover .carousel-image {
-    opacity: 0.75;
-}
 
 .carousel-overlay {
     position: absolute;
@@ -103,6 +98,31 @@
     transform: scale(0.95);
 }
 
+/* Dots */
+.image-dots {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+    z-index: 5;
+}
+
+.image-dots .dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.image-dots .dot.active {
+    background-color: #a972bd;
+    transform: scale(1.2);
+}
+
 /* Stats styling */
 .stat-number {
     color: #625ea6 !important;
@@ -150,6 +170,7 @@
     color: #6363AB;
     transform: rotate(75deg);
     filter: drop-shadow(0 0 20px white);
+    will-change: transform;
 }
 
 /* Tablet styles */
@@ -179,6 +200,10 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    .prev-conf-container {
+        padding: 60px 0;
+    }
+
     .glass-card {
         height: 300px;
         max-width: 90%;
