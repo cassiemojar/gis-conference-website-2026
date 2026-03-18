@@ -27,12 +27,23 @@
   font-size: 200px;
   right: -20px;
   bottom: 150px;
+  animation: gearSpin 18s linear infinite;
 }
 
 .flask {
   font-size: 300px;
   left: -64px;
-  transform: rotate(10.37deg);
+  animation: flaskFloat 4s ease-in-out infinite;
+}
+
+@keyframes gearSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes flaskFloat {
+  0%,  100% { transform: rotate(10.37deg) translateY(0px); }
+  50%        { transform: rotate(10.37deg) translateY(-22px); }
 }
 
 .agenda-body {

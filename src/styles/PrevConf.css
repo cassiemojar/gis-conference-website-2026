@@ -168,9 +168,14 @@
     left: 0px;
     font-size: 40px;
     color: #6363AB;
-    transform: rotate(75deg);
     filter: drop-shadow(0 0 20px white);
     will-change: transform;
+    animation: mouseFloat 3s ease-in-out infinite;
+}
+
+@keyframes mouseFloat {
+    0%,  100% { transform: rotate(75deg) translateY(0px); }
+    50%        { transform: rotate(75deg) translateY(-10px); }
 }
 
 /* Tablet styles */
