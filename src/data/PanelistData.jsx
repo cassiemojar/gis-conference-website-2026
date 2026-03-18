@@ -1,191 +1,88 @@
+import claire from '../images/speakers/claire.png'
+import charlyn from '../images/speakers/charlyn.png'
+import janis from '../images/speakers/janis.png'
+import mona from '../images/speakers/mona.png'
+import rahnuma from '../images/speakers/rahnuma.png'
+import zelalem from '../images/speakers/zelalem.png'
+import marzena from '../images/speakers/marzena.png'
+import grace from '../images/speakers/grace.png'
+import gabi from '../images/speakers/gabi.png'
+import sally from '../images/speakers/sally.png'
+import bavisha from '../images/speakers/bavisha.png'
+import jasmine from '../images/speakers/jasmine.png'
+import graceMwangi from '../images/speakers/graceMwangi.png'
+import jenna from '../images/speakers/jenna.png'
+import christin from '../images/speakers/christin.png'
+import angela from '../images/speakers/angela.png'
+import lisa from '../images/speakers/lisa.png'
+import rachel from '../images/speakers/rachel.png'
+import elizabeth from '../images/speakers/elizabeth.png'
+import rayna from '../images/speakers/rayna.png'
+import katie from '../images/speakers/katie.png'
+import malabika from '../images/speakers/malabika.png'
+import kennedy from '../images/speakers/kennedy.png'
+import melania from '../images/speakers/melania.png'
+import izabella from '../images/speakers/izabella.png'
+
 export const panelistData = {
-    Science: {
-      icon: "🔭",
-      panelTitle: "Science Panel",
-      location: "TBD",
-      panelists: [
-        {
-          name: "First Last",
-          initials: "FL",
-          role: "Research Lead",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent facilisis, velit at viverra posuere, nibh tortor pharetra massa, vitae luctus sem lorem at est.",
-        },
-        {
-          name: "Sample Name",
-          initials: "SN",
-          role: "Lab Coordinator",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer feugiat, risus eget cursus blandit, lectus mauris commodo nibh, non pellentesque lectus justo non urna.",
-        },
-        {
-          name: "Panel Guest",
-          initials: "PG",
-          role: "Clinical Analyst",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue, purus at bibendum ultricies, risus tortor luctus erat, nec dapibus lectus augue sit amet nunc.",
-        },
-        {
-          name: "Future Speaker",
-          initials: "FS",
-          role: "Data Scientist",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra, nunc a interdum tempor, neque odio pulvinar velit, vel faucibus libero magna ac mauris.",
-        },
-        {
-          name: "Guest Expert",
-          initials: "GE",
-          role: "STEM Educator",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius justo ut sem mattis, at malesuada lorem finibus. Donec commodo sem sit amet erat posuere porttitor.",
-        },
-      ],
-    },
-  
-    Technology: {
-      icon: "💻",
-      panelTitle: "Technology Panel",
-      location: "TBD",
-      panelists: [
-        {
-          name: "First Last",
-          initials: "FL",
-          role: "Software Engineer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet pretium nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-        },
-        {
-          name: "Sample Name",
-          initials: "SN",
-          role: "Product Designer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut erat vitae odio tincidunt posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-        },
-        {
-          name: "Panel Guest",
-          initials: "PG",
-          role: "UX Researcher",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Nulla facilisi. Nunc posuere turpis eget nunc fermentum, non gravida sem venenatis.",
-        },
-        {
-          name: "Future Speaker",
-          initials: "FS",
-          role: "Systems Developer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, enim eu suscipit pellentesque, augue leo fringilla sapien, a tristique ipsum tortor sit amet mauris.",
-        },
-        {
-          name: "Guest Expert",
-          initials: "GE",
-          role: "AI Specialist",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet magna nec metus tempor, eget dapibus nisi volutpat. Nulla facilisi.",
-        },
-      ],
-    },
-  
-    Engineering: {
-      icon: "⚙️",
-      panelTitle: "Engineering Panel",
-      location: "TBD",
-      panelists: [
-        {
-          name: "First Last",
-          initials: "FL",
-          role: "Civil Engineer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus efficitur justo ac sem malesuada, vel posuere erat consequat. In hac habitasse platea dictumst.",
-        },
-        {
-          name: "Sample Name",
-          initials: "SN",
-          role: "Mechanical Engineer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis malesuada, ipsum non pulvinar fermentum, elit felis malesuada risus, et ultrices elit lorem id libero.",
-        },
-        {
-          name: "Panel Guest",
-          initials: "PG",
-          role: "Project Engineer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vulputate magna in mauris semper, at convallis turpis volutpat. Cras tincidunt varius arcu.",
-        },
-        {
-          name: "Future Speaker",
-          initials: "FS",
-          role: "Electrical Engineer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dignissim nibh at neque dapibus, nec mollis libero volutpat. Duis placerat ex et erat faucibus faucibus.",
-        },
-        {
-          name: "Guest Expert",
-          initials: "GE",
-          role: "Design Engineer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lectus eget ligula dignissim interdum. Ut finibus egestas magna, nec lacinia leo vulputate ut.",
-        },
-      ],
-    },
-  
-    Arts: {
-      icon: "🎨",
-      panelTitle: "Arts Panel",
-      location: "TBD",
-      panelists: [
-        {
-          name: "First Last",
-          initials: "FL",
-          role: "Creative Director",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper commodo neque, vel varius lorem vestibulum sit amet. Integer pellentesque sapien vel sem ultrices luctus.",
-        },
-        {
-          name: "Sample Name",
-          initials: "SN",
-          role: "Visual Artist",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis urna sed lorem pulvinar, nec blandit lorem vehicula. Donec tristique metus ac suscipit ullamcorper.",
-        },
-        {
-          name: "Panel Guest",
-          initials: "PG",
-          role: "Media Producer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non lectus quis sapien sagittis sodales. Quisque mattis varius elit, non ullamcorper augue aliquet ut.",
-        },
-        {
-          name: "Future Speaker",
-          initials: "FS",
-          role: "Graphic Designer",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non porta est. In hac habitasse platea dictumst. Pellentesque eget lacus et est tincidunt interdum.",
-        },
-        {
-          name: "Guest Expert",
-          initials: "GE",
-          role: "Storytelling Lead",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra neque eu lectus eleifend, id aliquam turpis vulputate. Sed sit amet turpis id velit congue luctus.",
-        },
-      ],
-    },
-  
-    Math: {
-      icon: "📐",
-      panelTitle: "Math Panel",
-      location: "TBD",
-      panelists: [
-        {
-          name: "First Last",
-          initials: "FL",
-          role: "Applied Mathematician",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus suscipit augue sit amet diam fermentum, vitae malesuada elit volutpat. Integer porttitor ex sed enim fermentum vulputate.",
-        },
-        {
-          name: "Sample Name",
-          initials: "SN",
-          role: "Statistics Analyst",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida orci quis turpis vehicula, non convallis neque eleifend. Sed non luctus ipsum.",
-        },
-        {
-          name: "Panel Guest",
-          initials: "PG",
-          role: "Quantitative Researcher",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed magna faucibus, tincidunt nibh nec, sollicitudin mauris. Maecenas ultrices nisl nec risus feugiat.",
-        },
-        {
-          name: "Future Speaker",
-          initials: "FS",
-          role: "Math Educator",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rhoncus, nibh sit amet pulvinar malesuada, nibh lorem cursus velit, vitae tristique mauris nisl sit amet sapien.",
-        },
-        {
-          name: "Guest Expert",
-          initials: "GE",
-          role: "Data Modeler",
-          bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et libero ut mi mattis semper. Aenean sed tincidunt purus, ac pulvinar enim.",
-        },
-      ],
-    },
-  };
+  Science: {
+    icon: "🔭",
+    panelTitle: "Science Panel",
+    location: "TBD",
+    panelists: [
+      { name: "Claire Atkinson (She/Her)", initials: "CA", image: claire, role: "Facility Manager – Facility for High Resolution CryoEM, UBC", bio: "Claire has been the Facility Manager for HRMEM (UBC's facility for high resolution cryo-EM) since 2017. She has a PhD in Cellular Biophysics from the Rockefeller University, after which she completed a post-doc at the University of Chicago." },
+      { name: "Charlyn Black (She/Her)", initials: "CB", image: charlyn, role: "Professor – School of Population and Public Health, Faculty of Medicine, UBC", bio: "Dr. Black is a Professor in UBC's School of Population and Public Health in the Faculty of Medicine. She obtained her medical degree from the University of Manitoba and her doctorate in health services and policy research from The Johns Hopkins Bloomberg School of Public Health in Baltimore, Maryland. Dr. Black's research has focused on developing population-based data and information systems to study patterns of health and health care, to monitor the quality and effectiveness of medical care, and to inform policy aimed at improving the health of individuals and populations. Her current research interests focus on policy approaches to preventing and reversing the rising prevalence of chronic disease in the Canadian context." },
+      { name: "Janis McKenna (She/Her)", initials: "JM", image: janis, role: "Professor – Physics, UBC", bio: "Professor of Physics, UBC 1993-present. Research Scientist and Adjunct Professor, Institute of Particle Physics Canada, 1990-93 (based at CERN lab in Switzerland). Postdoctoral Research Fellow, California Institute of Technology, 1987-90. Co-op work terms (full time) as an undergrad at IBM, AECL and Swiss Federal Institute for Reactor Research, and TRIUMF. She enjoys teaching all levels of undergraduate and graduate physics at UBC. In her research, she has investigated quarks and their interactions at major particle physics accelerator laboratories in the USA, Switzerland, Germany and Japan. In her spare time she enjoys hiking, kayaking, gardening and skiing with her adult kids and husband." },
+      { name: "Mona Berciu (She/Her)", initials: "MB", image: mona, role: "Professor – Physics, Department of Physics and Astronomy, UBC", bio: "Dr. Mona Berciu joined the Department of Physics and Astronomy at UBC as an Assistant Professor in 2002. Since 2012, she has been a Professor and Principal Investigator at the Quantum Matter Institute at UBC. She is a condensed matter theorist whose research focuses primarily on the properties of \"dressed electrons\" and strongly correlated electron systems." },
+      { name: "Rahnuma Sara (She/Her)", initials: "RS", image: rahnuma, role: "UBC Medical Student", bio: "Originally from Bangladesh, Rahnuma earned her undergraduate degree in Biochemistry and Molecular Biology with Distinction from UBC Vancouver. Prior to entering medical school, she was deeply engaged in community and clinical work, serving as Research Coordinator for General Surgery at Vancouver General Hospital, a Crisis Line call-taker, and working in Harm Reduction clinics in Vancouver's Downtown Eastside. Since beginning medical school at UBC, Rahnuma has demonstrated a strong commitment to advocacy and leadership. She served as the National Officer of Education – Advocacy for the Canadian Federation of Medical Students (CFMS) and is currently VP Equity, Diversity, and Inclusion for UBC's Medical Undergraduate Society. In recognition of her outstanding leadership, academic excellence, and contributions to medical education, she was awarded the Canadian Medical Hall of Fame Award in 2025." },
+    ],
+  },
+  Technology: {
+    icon: "💻",
+    panelTitle: "Technology Panel",
+    location: "TBD",
+    panelists: [
+      { name: "Zelalem Araya (She/Her)", initials: "ZA", image: zelalem, role: "Data Scientist Intern – Disney Industrial Light & Magic", bio: "Current UBC student studying an integrated sciences degree in ecology & statistics with a minor in GIS & Geographical Computation. Previously interned at Natural Resources Canada, Department of National Defense, Canadian Space Agency, and Electronic Arts (EA) + currently at Disney's Industrial Light & Magic primarily in data science fields. Also a casual web designer & co-president of women in data science @ UBC!" },
+      { name: "Marzena Karpinska (She/Her)", initials: "MK", image: marzena, role: "Assistant Professor – Simon Fraser University", bio: "Marzena Karpinska is an Assistant Professor at Simon Fraser University (SFU), where her research focuses on Natural Language Processing (NLP), specifically in evaluation, machine translation, and multilingual NLP. Before joining SFU, she worked as a Senior Researcher at Microsoft in the Microsoft Translator team. Marzena received her PhD from the University of Tokyo and did her postdoctoral training at the University of Massachusetts Amherst." },
+      { name: "Grace Co (She/Her)", initials: "GC", image: grace, role: "Product Manager/Software Engineer – Tesla", bio: "Grace is a Computer Science and Master of Management student at UBC with experience in product and software roles. She previously worked as a Product Manager at Tesla and is returning as a Software Engineer. She has also worked at SAP as an Agile Developer and at PwC as a Technology Consultant. Grace is interested in building practical, user-focused software and learning from fast-paced, collaborative teams." },
+      { name: "Gabi Rosu (She/Her)", initials: "GR", image: gabi, role: "Senior UX Researcher – BC Public Service", bio: "Gabi Rosu is a Senior UX Researcher with over five years of experience designing human-centered digital services across the social sector of government. She led the design and research of a province-wide digital registry for early childhood educators, building expertise in user research, journey mapping, co-design, and accessible service design. Gabi recently began co-founding an early-stage health tech startup focused on equitable, clear, and accessible chronic patient care. She is passionate about turning complex systems into intuitive experiences and mentors teams at hackathons and design competitions." },
+      { name: "Sally Poon (She/Her)", initials: "SP", image: sally, role: "Software Engineer II in Infrastructure – Okta", bio: "Hi folks, I am a Computer Systems Technology graduate with honours from BCIT where I've been involved as an Exec in a couple of clubs such as Women in Computing, and as a Chair of BCIT's Student Association. I also graduated with a Bachelor of Arts in Psychology from UBC, where I worked in a cognitive development lab. I started at Okta as a new grad, designing, building, and maintaining services related to Continuous Delivery for our products. Outside of work, I enjoy travelling, pottery, and being the best auntie for my sister's dog." },
+    ],
+  },
+  Engineering: {
+    icon: "⚙️",
+    panelTitle: "Engineering Panel",
+    location: "TBD",
+    panelists: [
+      { name: "Bavisha Kalyan (She/Her)", initials: "BK", image: bavisha, role: "Assistant Professor – UBC Vancouver", bio: "Dr. Kalyan brings extensive expertise in environmental engineering and a dedication to community-centered research that addresses social and environmental challenges. Her work focuses on building equitable community-academic partnerships to tackle contaminant exposure in vulnerable communities, with a focus on understanding how contaminants affect health and well-being." },
+      { name: "Jasmine Tam (She/Her)", initials: "JT", image: jasmine, role: "PhD Candidate – Biomedical Engineering, UBC", bio: "Jasmine completed her BEng at McGill University in 2022 and her MSc in Biomedical Engineering at Imperial College London, UK, in 2023. She is currently a PhD candidate in Biomedical Engineering at the University of British Columbia under the supervision of Dr. David Wilson studying hip biomechanics." },
+      { name: "Grace Mwangi (She/Her)", initials: "GM", image: graceMwangi, role: "Junior Project Manager – Corix Utilities", bio: "Grace Mwangi is a Junior Project Manager at Corix Utilities, a district energy company that develops, delivers, and operates low-carbon energy systems. Over the past three years, she has supported the design and construction of thermal energy projects, helping bring sustainable infrastructure from concept through implementation. With a background in Chemical Engineering, she is passionate about advancing practical, low-carbon energy solutions that create measurable environmental impact." },
+      { name: "Jenna Usprech (She/Her)", initials: "JU", image: jenna, role: "Associate Professor of Teaching – UBC", bio: "Dr. Usprech, PhD, PEng, received her PhD from the University of Toronto, her Master's from Queen's University (both in different areas of tissue engineering research), and her Bachelor's degree in Biological Engineering from the University of Guelph. Dr. Usprech joined UBC as an Assistant Professor of Teaching in 2019 so that she could introduce new areas of the field to undergraduate students and continue to be immersed in biomedical engineering education. She is particularly passionate about student wellness, science communication, and classroom strategies that promote critical thought and retention of material. Dr. Usprech has worked to incorporate hands-on cellular/tissue engineering design into the SBME undergraduate curriculum." },
+      { name: "Christin Wiedemann (She/Her)", initials: "CW", image: christin, role: "Senior Director – Slalom", bio: "Christin Wiedemann, Ph.D., Senior Director at Slalom, brings a unique perspective as a trained particle physicist and seasoned technology leader. Leveraging her scientific background and analytical expertise, Christin dissects complex software challenges and drives innovation in quality engineering. With close to two decades in professional services, she has led multidisciplinary teams across finance, insurance, gaming, and more, guiding organizations through Agile and technology transformations. At Slalom, Christin collaborates with clients and a dedicated team of quality advocates to deliver groundbreaking products and elevate quality engineering practices. Her passion for continuous improvement and strategic leadership makes her a trusted partner for advancing technology solutions." },
+    ],
+  },
+  Arts: {
+    icon: "🎨",
+    panelTitle: "Arts Panel",
+    location: "TBD",
+    panelists: [
+      { name: "Angela Low (She/Her)", initials: "AL", image: angela, role: "Session Instructor – UBC; Research Manager – SFU", bio: "Dr. Angela Low is an expert in emotional intelligence, with nearly 20 years of experience in helping to foster resilience and social and emotional competence in children and the adults around them. An adjunct professor at the University of British Columbia and researcher at Simon Fraser University, she studies, develops and helps implement mental health promotion programs for children and families across BC school communities. She regularly collaborates with government and community agencies, schools and early childhood educators to translate research into practices that promote social and emotional competence and well-being. Her approach is grounded in both research and the real-world experience of raising two children who are lovable but also challenge her emotional intelligence every .single. day. As a parent and an educator, Angela is passionate about helping transform education, healthcare and community practices to better support educators and parents in the hard work of raising resilient kids in this rapidly changing world." },
+      { name: "Lisa Sundstrom (She/Her)", initials: "LS", image: lisa, role: "Professor – Political Science; Associate Vice-President, Research & Innovation, UBC", bio: "Dr. Lisa McIntosh Sundstrom is Professor of Political Science at the University of British Columbia. Since obtaining her PhD at Stanford University in 2002, her research has focused on democratization, civil society, human rights, gender issues, climate policy, international democracy assistance, legal mobilization, and NGO activism in both domestic and transnational politics. She specializes in Russian civil society, with a current project focused on the challenges faced by Russian civil society activists in exile. Since July 2025, she has been Associate Vice-President, Research & Innovation at UBC." },
+      { name: "Rachel C. Lin-Yang (She/Her)", initials: "RL", image: rachel, role: "PhD Candidate – UBC; Sessional Instructor, Scholarship of Teaching and Learning Specialist, and Lab Manager", bio: "Rachel C. Lin-Yang is a Ph.D. candidate at UBC exploring students' perceptions of failure experiences. Originating from a neuroscience background, she returned to graduate school after years of teaching to pursue a Ph.D. in Educational Psychology. As a research specialist for the Scholarship of Teaching and Learning and lab manager for the \"STAR\" Lab, she is involved in projects related to educational approaches, measurement, and learning frameworks. Her interests include developing higher-order thinking skills, creating tools for inclusion and equity in the classroom, and fostering positive classroom and school culture. She currently teaches human development at UBC." },
+      { name: "Elizabeth Marsh (She/Her)", initials: "EM", image: elizabeth, role: "Third-year Undergraduate Student – UBC; UBC Baby Learning Lab", bio: "Elizabeth is a third-year B.A. student majoring in Psychology at UBC. Her interests focus on psychopathology and childhood development. She works in Dr. Lauren Emberson's Baby Learning Lab on projects investigating behavioural and neural components of infants' learning, particularly during naturalistic infant-caregiver toy play sessions. Her passion for working with infants and youth stems from teaching and volunteering experiences. She plans to pursue a career in clinical psychology." },
+      { name: "Rayna Arora (She/Her)", initials: "RA", image: rayna, role: "Science Writer – Turvey Lab, BC Children's Hospital Research Institute", bio: "Rayna Arora is a Political Science major and Journalism minor at the University of British Columbia. She works as a CO-OP Science Writer at Turvey Lab, BC Children's Hospital Research Institute. She is the author of five published novels exploring political and philosophical themes. As an aspiring lawyer and former UN volunteer, Rayna is committed to advancing equity, accessibility, and social impact, building a career at the intersection of law, research, and narrative-driven change. Outside of work and school, she is a classical ballerina and pianist and enjoys hosting game nights." },
+    ],
+  },
+  Math: {
+    icon: "📐",
+    panelTitle: "Math Panel",
+    location: "TBD",
+    panelists: [
+      { name: "Katie Burak (She/Her)", initials: "KB", image: katie, role: "Assistant Professor of Teaching – Statistics Department, UBC", bio: "I am an Assistant Professor of Teaching in the Department of Statistics as well as a member of the academic team for the Master of Data Science Program at the University of British Columbia. My work focuses on modern pedagogical methods in statistics and data science. I am passionate about academic outreach, with a focus on promoting women in data science and addressing equity issues in the statistical sciences." },
+      { name: "Malabika Pramanik (She/Her)", initials: "MP", image: malabika, role: "Professor of Mathematics – UBC; Scientific Director, Banff International Research Station", bio: "Malabika Pramanik is a Professor of Mathematics at UBC and Scientific Director of the Banff International Research Station (BIRS), an international centre for collaborative research in the mathematical sciences. Her research lies in harmonic analysis and its connections to geometry, combinatorics, and number theory. Beyond her scholarly work, she is deeply committed to mentoring students and fostering inclusive research environments. At BIRS, she works to create spaces where people from diverse backgrounds can engage meaningfully with mathematics. She is passionate about supporting girls, women, and gender-diverse scholars in discovering confidence and joy in STEAM." },
+      { name: "Kennedy Yung (She/Her)", initials: "KY", image: kennedy, role: "Junior Software Developer – Health-tech startup; UBC Math Student", bio: "Kennedy Yung is a Mathematics student at UBC and a Junior Software Developer at a health-tech startup. She previously served as an Information Systems Intern at Engineers and Geoscientists BC, building internal applications and modernizing legacy systems. Kennedy is also a Co-Lead and Software Engineer for the UBC BEST design team, leading system architecture for a gamified MS rehabilitation device and app. An avid hackathon participant, she enjoys building functional prototypes under tight deadlines." },
+      { name: "Melania Alvarez Adem", initials: "MA", image: melania, role: "Outreach Coordinator – Department of Mathematics, UBC; Education Coordinator – Pacific Institute for the Mathematical Sciences", bio: "Dr. Melania Alvarez is a Mexican mathematics educator whose work integrates research, outreach, and community engagement with a strong commitment to equity and access. She serves as Education Coordinator at PIMS and Outreach Coordinator in the Department of Mathematics at UBC. Educated in Mexico, the United States, and Canada, she holds degrees in economics, anthropology, operations research, industrial engineering, and mathematics education. She has developed extensive outreach initiatives, including the PIMS Emerging Indigenous Scholars Summer School and culturally responsive programs for underrepresented students." },
+      { name: "Izabella Laba (She/Her)", initials: "IL", image: izabella, role: "Professor of Mathematics – UBC", bio: "Izabella Laba is a Professor of Mathematics at UBC. She received her Ph.D. from the University of Toronto in 1994 and held positions at UCLA and Princeton University before joining UBC in 2000. She has received the Coxeter-James and Krieger-Nelson research prizes from the Canadian Mathematical Society and was an invited speaker at the International Congress of Mathematicians in 2014." },
+    ],
+  },
+};
