@@ -28,7 +28,7 @@ export const panelistData = {
   Science: {
     icon: "🔭",
     panelTitle: "Science Panel",
-    location: "TBD",
+    location: "SCRF",
     panelists: [
       { name: "Claire Atkinson (She/Her)", initials: "CA", image: claire, role: "Facility Manager – Facility for High Resolution CryoEM, UBC", bio: "Claire has been the Facility Manager for HRMEM (UBC's facility for high resolution cryo-EM) since 2017. She has a PhD in Cellular Biophysics from the Rockefeller University, after which she completed a post-doc at the University of Chicago." },
       { name: "Charlyn Black (She/Her)", initials: "CB", image: charlyn, role: "Professor – School of Population and Public Health, Faculty of Medicine, UBC", bio: "Dr. Black is a Professor in UBC's School of Population and Public Health in the Faculty of Medicine. She obtained her medical degree from the University of Manitoba and her doctorate in health services and policy research from The Johns Hopkins Bloomberg School of Public Health in Baltimore, Maryland. Dr. Black's research has focused on developing population-based data and information systems to study patterns of health and health care, to monitor the quality and effectiveness of medical care, and to inform policy aimed at improving the health of individuals and populations. Her current research interests focus on policy approaches to preventing and reversing the rising prevalence of chronic disease in the Canadian context." },
@@ -40,7 +40,7 @@ export const panelistData = {
   Technology: {
     icon: "💻",
     panelTitle: "Technology Panel",
-    location: "TBD",
+    location: "SCRF",
     panelists: [
       { name: "Zelalem Araya (She/Her)", initials: "ZA", image: zelalem, role: "Data Scientist Intern – Disney Industrial Light & Magic", bio: "Current UBC student studying an integrated sciences degree in ecology & statistics with a minor in GIS & Geographical Computation. Previously interned at Natural Resources Canada, Department of National Defense, Canadian Space Agency, and Electronic Arts (EA) + currently at Disney's Industrial Light & Magic primarily in data science fields. Also a casual web designer & co-president of women in data science @ UBC!" },
       { name: "Marzena Karpinska (She/Her)", initials: "MK", image: marzena, role: "Assistant Professor – Simon Fraser University", bio: "Marzena Karpinska is an Assistant Professor at Simon Fraser University (SFU), where her research focuses on Natural Language Processing (NLP), specifically in evaluation, machine translation, and multilingual NLP. Before joining SFU, she worked as a Senior Researcher at Microsoft in the Microsoft Translator team. Marzena received her PhD from the University of Tokyo and did her postdoctoral training at the University of Massachusetts Amherst." },
@@ -52,7 +52,7 @@ export const panelistData = {
   Engineering: {
     icon: "⚙️",
     panelTitle: "Engineering Panel",
-    location: "TBD",
+    location: "SCRF",
     panelists: [
       { name: "Bavisha Kalyan (She/Her)", initials: "BK", image: bavisha, role: "Assistant Professor – UBC Vancouver", bio: "Dr. Kalyan brings extensive expertise in environmental engineering and a dedication to community-centered research that addresses social and environmental challenges. Her work focuses on building equitable community-academic partnerships to tackle contaminant exposure in vulnerable communities, with a focus on understanding how contaminants affect health and well-being." },
       { name: "Jasmine Tam (She/Her)", initials: "JT", image: jasmine, role: "PhD Candidate – Biomedical Engineering, UBC", bio: "Jasmine completed her BEng at McGill University in 2022 and her MSc in Biomedical Engineering at Imperial College London, UK, in 2023. She is currently a PhD candidate in Biomedical Engineering at the University of British Columbia under the supervision of Dr. David Wilson studying hip biomechanics." },
@@ -64,7 +64,7 @@ export const panelistData = {
   Arts: {
     icon: "🎨",
     panelTitle: "Arts Panel",
-    location: "TBD",
+    location: "SCRF",
     panelists: [
       { name: "Angela Low (She/Her)", initials: "AL", image: angela, role: "Session Instructor – UBC; Research Manager – SFU", bio: "Dr. Angela Low is an expert in emotional intelligence, with nearly 20 years of experience in helping to foster resilience and social and emotional competence in children and the adults around them. An adjunct professor at the University of British Columbia and researcher at Simon Fraser University, she studies, develops and helps implement mental health promotion programs for children and families across BC school communities. She regularly collaborates with government and community agencies, schools and early childhood educators to translate research into practices that promote social and emotional competence and well-being. Her approach is grounded in both research and the real-world experience of raising two children who are lovable but also challenge her emotional intelligence every .single. day. As a parent and an educator, Angela is passionate about helping transform education, healthcare and community practices to better support educators and parents in the hard work of raising resilient kids in this rapidly changing world." },
       { name: "Lisa Sundstrom (She/Her)", initials: "LS", image: lisa, role: "Professor – Political Science; Associate Vice-President, Research & Innovation, UBC", bio: "Dr. Lisa McIntosh Sundstrom is Professor of Political Science at the University of British Columbia. Since obtaining her PhD at Stanford University in 2002, her research has focused on democratization, civil society, human rights, gender issues, climate policy, international democracy assistance, legal mobilization, and NGO activism in both domestic and transnational politics. She specializes in Russian civil society, with a current project focused on the challenges faced by Russian civil society activists in exile. Since July 2025, she has been Associate Vice-President, Research & Innovation at UBC." },
@@ -76,7 +76,7 @@ export const panelistData = {
   Math: {
     icon: "📐",
     panelTitle: "Math Panel",
-    location: "TBD",
+    location: "SCRF",
     panelists: [
       { name: "Katie Burak (She/Her)", initials: "KB", image: katie, role: "Assistant Professor of Teaching – Statistics Department, UBC", bio: "I am an Assistant Professor of Teaching in the Department of Statistics as well as a member of the academic team for the Master of Data Science Program at the University of British Columbia. My work focuses on modern pedagogical methods in statistics and data science. I am passionate about academic outreach, with a focus on promoting women in data science and addressing equity issues in the statistical sciences." },
       { name: "Malabika Pramanik (She/Her)", initials: "MP", image: malabika, role: "Professor of Mathematics – UBC; Scientific Director, Banff International Research Station", bio: "Malabika Pramanik is a Professor of Mathematics at UBC and Scientific Director of the Banff International Research Station (BIRS), an international centre for collaborative research in the mathematical sciences. Her research lies in harmonic analysis and its connections to geometry, combinatorics, and number theory. Beyond her scholarly work, she is deeply committed to mentoring students and fostering inclusive research environments. At BIRS, she works to create spaces where people from diverse backgrounds can engage meaningfully with mathematics. She is passionate about supporting girls, women, and gender-diverse scholars in discovering confidence and joy in STEAM." },
