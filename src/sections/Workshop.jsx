@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import "../styles/Workshop.css";
 import { workshopData } from "../data/WorkshopData";
@@ -7,12 +7,14 @@ function Workshop() {
   const tabNames = Object.keys(workshopData);
   const [activeTab, setActiveTab] = useState(tabNames[0]);
   const [flippedIndex, setFlippedIndex] = useState(null);
+  const shellRef = useRef(null);
 
   const activeCategory = useMemo(() => workshopData[activeTab], [activeTab]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     setFlippedIndex(null);
+    shellRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleCardClick = (index) => {
@@ -51,7 +53,7 @@ function Workshop() {
         </ul>
       </div>
 
-      <div className="workshop-shell" onClick={(e) => e.stopPropagation()}>
+      <div className="workshop-shell" ref={shellRef} onClick={(e) => e.stopPropagation()}>
         <div className="workshop-grid">
           {activeCategory.workshops.map((item, index) => {
             const isFlipped = flippedIndex === index;
@@ -67,12 +69,11 @@ function Workshop() {
                 </p>
 
                 <div className="workshop-avatar">
-                    {item.image ? (
-                        <img src={item.image} alt={item.name} className="workshop-avatar-img" />
-                    ) : (
+                  {item.image ? (
+                    <img src={item.image} alt={item.name} className="workshop-avatar-img" />
+                  ) : (
                     <span>{item.initials}</span>
-                    )}
-                    
+                  )}
                 </div>
 
                 <h3 className="workshop-name">{item.name}</h3>

@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import "../styles/Panelist.css";
 import { panelistData } from "../data/PanelistData";
@@ -7,12 +7,14 @@ function Panelist() {
   const tabNames = Object.keys(panelistData);
   const [activeTab, setActiveTab] = useState(tabNames[0]);
   const [flippedIndex, setFlippedIndex] = useState(null);
+  const shellRef = useRef(null);
 
   const activePanel = useMemo(() => panelistData[activeTab], [activeTab]);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     setFlippedIndex(null);
+    shellRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleCardClick = (index) => {
@@ -36,7 +38,7 @@ function Panelist() {
         STEAM Panelists
       </Typography>
 
-      <div className="panelist-shell" onClick={(e) => e.stopPropagation()}>
+      <div className="panelist-shell" ref={shellRef} onClick={(e) => e.stopPropagation()}>
         <div className="panelist-header-row">
           <p className="panelist-subheading">
             <span className="panelist-subheading-icon">{activePanel.icon}</span>
