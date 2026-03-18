@@ -34,12 +34,12 @@ function App() {
                     <NavBar />
                 </div>
             </div>
-            <div className='Hero-Background'>
+            <div className='Hero-Background' id='Hero'>
                 <div className='App-Component'>
                     <Hero />
                 </div>
             </div>
-            <div className='About-Us-Background'>
+            <div className='About-Us-Background' id='About'>
                 <SectionReveal direction="left">
                     <div className='App-Component'>
                         <AboutUs />
@@ -53,7 +53,7 @@ function App() {
                     </div>
                 </SectionReveal>
             </div>
-            <div className='KeyNote-Background' id='KeyNote'>
+            <div className='KeyNote-Background' id='Keynote'>
                 <SectionReveal direction="right">
                     <div className='KeyNote-Component'>
                         <Keynote />

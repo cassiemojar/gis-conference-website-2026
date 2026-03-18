@@ -92,11 +92,11 @@ export default function ButtonAppBar() {
                             color: 'black', // Ensure text remains visible,
                         }
                     }}>
-                    {['Home', 'About', 'Agenda', 'Workshops', 'Sponsors', 'FAQ'].map(
+                    {['Home', 'About', 'Agenda', 'Keynote', 'Workshops', 'Panelist', 'Sponsors', 'FAQ'].map(
                         (tab) => (
                             <MenuItem
                                 key={tab}
-                                onClick={() => handleTabChange(tab === 'Home' ? 'Hero' : tab)}
+                                onClick={() => handleTabChange(tab)}
                                 sx={{
                                     fontFamily: "'Josefin Sans', sans-serif",
                                     fontSize: '1.1rem',
@@ -136,11 +136,11 @@ export default function ButtonAppBar() {
                         overflow: 'hidden',
                         paddingLeft: '10px'
                     }}>
-                    {['Home', 'About', 'Agenda', 'Workshops', 'Sponsors', 'FAQ'].map(
+                    {['Home', 'About', 'Agenda', 'Keynote', 'Workshops', 'Panelist', 'Sponsors', 'FAQ'].map(
                         (tab) => (
                             <Button
                                 key={tab}
-                                onClick={() => handleTabChange(tab === 'Home' ? 'Hero' : tab)}
+                                onClick={() => handleTabChange(tab)}
                                 sx={{
                                     textTransform: 'none',
                                     mx: 2,
