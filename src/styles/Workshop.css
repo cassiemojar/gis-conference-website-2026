@@ -125,6 +125,16 @@
   color: #ffffff;
 }
 
+
+.workshop-role {
+    margin: 0 0 12px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.72);
+    text-align: center;
+}
+
 .workshop-details-area {
   position: relative;
   min-height: 102px;
