@@ -9,7 +9,7 @@ import { FaMousePointer } from 'react-icons/fa';
 //images
 import img1 from './../images/prev-conf/2025-head.JPG';
 import img2 from './../images/prev-conf/merch.jpg';
-import img3 from './../images/prev-conf/discussion.JPG';
+import img3 from './../images/prev-conf/discussion.jpg';
 import img4 from './../images/prev-conf/booths.JPG';
 import img5 from './../images/prev-conf/presenter-1.JPG';
 import img6 from './../images/prev-conf/audience.JPG';
