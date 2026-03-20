@@ -22,9 +22,13 @@ function Workshop() {
   };
 
   return (
-    <Box id="Workshop" className="workshop-section" onClick={() => setFlippedIndex(null)}>
+    <Box
+      id='Workshop'
+      className='workshop-section'
+      onClick={() => setFlippedIndex(null)}
+    >
       <Typography
-        variant="h1"
+        variant='h1'
         sx={{
           textAlign: "center",
           color: "#EFCCFF",
@@ -38,7 +42,7 @@ function Workshop() {
         WORKSHOPS
       </Typography>
 
-      <div className="workshop-intro">
+      <div className='workshop-intro'>
         <ul>
           <li>
             Each category (Science, Arts & Math, Technology, Engineering) has 2
@@ -53,39 +57,54 @@ function Workshop() {
         </ul>
       </div>
 
-      <div className="workshop-shell" ref={shellRef} onClick={(e) => e.stopPropagation()}>
-        <div className="workshop-grid">
+      <div
+        className='workshop-shell'
+        ref={shellRef}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className='workshop-grid'>
           {activeCategory.workshops.map((item, index) => {
             const isFlipped = flippedIndex === index;
             return (
               <div
                 className={`workshop-card ${isFlipped ? "is-flipped" : ""}`}
                 key={`${activeTab}-${index}`}
-                onClick={(e) => { e.stopPropagation(); handleCardClick(index); }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleCardClick(index);
+                }}
               >
-                <p className="workshop-time">{item.time}</p>
-                <p className="workshop-topic-line">
+                <p className='workshop-time'>
+                  {item.time} @ {item.location}
+                </p>
+                <p className='workshop-topic-line'>
                   <strong>{item.topic}</strong> <span>led by:</span>
                 </p>
 
-                <div className="workshop-avatar">
+                <div className='workshop-avatar'>
                   {item.image ? (
-                    <img src={item.image} alt={item.name} className="workshop-avatar-img" />
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className='workshop-avatar-img'
+                    />
                   ) : (
                     <span>{item.initials}</span>
                   )}
                 </div>
 
-                <h3 className="workshop-name">{item.name}</h3>
+                <h3 className='workshop-name'>{item.name}</h3>
 
-                <div className="workshop-details-area">
-                  <div className="workshop-default-content">
-                    <p className="workshop-role">{item.role}</p>
+                <div className='workshop-details-area'>
+                  <div className='workshop-default-content'>
+                    <p className='workshop-role'>{item.role}</p>
                   </div>
 
-                  <div className="workshop-hover-content">
-                    <p className="workshop-role workshop-role-hover">{item.role}</p>
-                    <p className="workshop-description">{item.description}</p>
+                  <div className='workshop-hover-content'>
+                    <p className='workshop-role workshop-role-hover'>
+                      {item.role}
+                    </p>
+                    <p className='workshop-description'>{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -93,11 +112,11 @@ function Workshop() {
           })}
         </div>
 
-        <div className="workshop-tabs">
+        <div className='workshop-tabs'>
           {tabNames.map((tab) => (
             <button
               key={tab}
-              type="button"
+              type='button'
               className={`workshop-tab ${activeTab === tab ? "active" : ""}`}
               onClick={() => handleTabChange(tab)}
             >

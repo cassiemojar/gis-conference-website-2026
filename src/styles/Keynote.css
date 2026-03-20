@@ -26,21 +26,27 @@
 
 /* Card */
 .keynote-card {
-  min-height: 355px;
+  /* min-height: 355px; */
   background: rgba(116, 101, 168, 0.34);
   border-radius: 1rem;
   padding: 18px 18px 20px;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 8px 20px rgba(54, 44, 99, 0.12);
   backdrop-filter: blur(6px);
   text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  flex-grow: 1;
 }
 
 .keynote-card:hover {
   transform: translateY(-4px);
   background: rgba(116, 101, 168, 0.48);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 14px 28px rgba(45, 34, 88, 0.18);
 }
 
@@ -90,7 +96,9 @@
 /* Match workshop default/hover content transitions */
 .speaker-default-content,
 .speaker-hover-content {
-  transition: opacity 0.22s ease, transform 0.22s ease;
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
 }
 
 .speaker-default-content {
@@ -111,7 +119,8 @@
 .keynote-card.is-flipped {
   transform: translateY(-4px);
   background: rgba(116, 101, 168, 0.48);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
     0 14px 28px rgba(45, 34, 88, 0.18);
 }
 
@@ -229,10 +238,16 @@
 }
 
 @keyframes gearSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 600px) {
-  .section-gear { display: none; }
+  .section-gear {
+    display: none;
+  }
 }
