@@ -1,8 +1,8 @@
 import img1 from '../images/about/about-1.jpg';
 import img2 from '../images/about/about-2.JPG';
 import img3 from '../images/about/about-3.JPG';
-import img4 from '../images/about/about-4.jpg';
-import img5 from '../images/about/about-5.jpg';
+import img4 from '../images/about/about-4.JPG';
+import img5 from '../images/about/about-5.JPG';
 
 
 
